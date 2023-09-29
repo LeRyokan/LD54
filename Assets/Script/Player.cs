@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int m_speedCoef;
 
     private EventInstance eventInstance;
+    private EventInstance snapshot;
 
     private float timer = 0f;
     private Vector2 movement;
@@ -41,6 +42,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("TOUCH GROUND OBJECT CALLED Plane");
             eventInstance = RuntimeManager.CreateInstance("event:/Touch Ground");
+            snapshot = FMODUnity.RuntimeManager.CreateInstance ("snapshot:/Cave");
+            snapshot.start();
+            // eventInstance.setParameterByName("isActive", 1);
             eventInstance.start();
         }
     }
