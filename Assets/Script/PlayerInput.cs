@@ -31,7 +31,7 @@ public class PlayerInput : MonoBehaviour
     void OnEnable()
     {
         m_playerControls.Ground.Move.performed += MoveOnPerformed;
-         m_playerControls.Ground.Jump.performed += JumpOnPerformed;
+        m_playerControls.Ground.Jump.performed += JumpOnPerformed;
     }
     
     private void OnDisable()
