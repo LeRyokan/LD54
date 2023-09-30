@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
-    
+        DOTween.Init();
         if (Instance != null && Instance != this) 
         { 
             Destroy(this); 
