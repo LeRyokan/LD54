@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 public class BatController : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class BatController : MonoBehaviour
     [SerializeField] private Vector3 WingFlapDir;
     [SerializeField] private float WingFlapForce;
     [SerializeField] private Vector2 WingDir;
+
+    [SerializeField][Range(-64f, 64f)] private float panning;
+    private FMOD.Studio.EventInstance instance;
     private void Awake()
     {
         m_batControls = new BatControls();
@@ -59,5 +63,42 @@ public class BatController : MonoBehaviour
     void Update()
     {
         WingDir = m_batControls.Gameplay.Direction.ReadValue<Vector2>();
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        DetectSideOfCollision(collision);
+    }
+
+    public void DetectSideOfCollision(Collision2D collision)
+    {
+        // collision tag must be one of (wall, ennemy or safe space)
+        string[] colliders = { "TilemapWall", "Ennemy", "SafeSpace" };
+        panning = 0;
+        instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
+        if(colliders.Any(collision.gameObject.name.Contains))
+        {
+            Vector2 hit = collision.contacts[0].normal;
+            Debug.Log(hit);
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Sonar");
+            // hit.x different from 0 means bat touched a wall on left or right
+            if(hit.x != 0)
+            {
+                var distanceX = collision.transform.position.x - transform.position.x;
+                Debug.Log(distanceX);
+                if (hit.x < 0f)
+                {
+                    Debug.Log("Pan to Right");
+                    panning = distanceX * 10;
+                } else if (distanceX > 0f)
+                {
+                    Debug.Log("Pan to Left");
+                    panning = distanceX * 10;
+                }
+            }
+            instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
+            instance.start();
+            // reset value so if next collision is up/bottom only the sound is centered
+        }
     }
 }
