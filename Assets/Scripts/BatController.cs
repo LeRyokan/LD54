@@ -19,6 +19,7 @@ public class BatController : MonoBehaviour
     [SerializeField] private float velocity;
 
     private FMOD.Studio.EventInstance flapSoundInstance;
+    private FMOD.Studio.EventInstance hitWallSoundInstance;
     
     private void Awake()
     {
@@ -69,7 +70,16 @@ public class BatController : MonoBehaviour
         m_wingDir = m_batControls.Gameplay.Direction.ReadValue<Vector2>();
         m_mousePosition = m_batControls.Gameplay.MousePosition.ReadValue<Vector2>();
         var originPos = m_rigidbody.transform.position;
-        var inputPos = new Vector3(m_wingDir.x*velocity, 0, 0);
+        var inputPos = new Vector3(m_wingDir.x * velocity, 0, 0);
         m_rigidbody.transform.position = originPos + inputPos;
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.transform.CompareTag("Wall"))
+        {
+            hitWallSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Hit");
+            hitWallSoundInstance.start();
+        }
     }
 }

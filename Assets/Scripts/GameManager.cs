@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     [SerializeField] private BatController m_playerBat;
     [SerializeField] private List<StartZone> m_levelStartZoneList;
-    private int m_currentLevel = 0;
+    public int m_currentLevel = 0;
     
     private void Awake() 
     { 
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     
         if (Instance != null && Instance != this) 
         { 
-            Destroy(this); 
+            Destroy(this);
         } 
         else 
         { 

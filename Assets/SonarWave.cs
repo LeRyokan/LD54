@@ -14,6 +14,8 @@ public class SonarWave : MonoBehaviour
     [SerializeField] private float m_shootCooldown;
     [SerializeField] private float m_sonarForce;
     [SerializeField][Range(-64f, 64f)] private float panning;
+
+    [SerializeField] private BatController m_bat;
     private FMOD.Studio.EventInstance instance;
 
     private Vector3 m_velocity;
@@ -90,6 +92,9 @@ public class SonarWave : MonoBehaviour
                 }
             }
             instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
+            var distanceBetweenBatAndCollider = Vector3.Distance(m_bat.transform.position, transform.position);
+            Debug.Log(distanceBetweenBatAndCollider);
+            instance.setParameterByName("Volume", distanceBetweenBatAndCollider);
             instance.start();
         }
     }
