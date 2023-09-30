@@ -15,6 +15,10 @@ public class BatController : MonoBehaviour
     [SerializeField] private Vector2 m_wingDir;
     [SerializeField] private Vector2 m_mousePosition;
     [SerializeField] private SonarWave m_sonarWave;
+
+    [SerializeField] private float velocity;
+
+    private FMOD.Studio.EventInstance flapSoundInstance;
     
     private void Awake()
     {
@@ -47,8 +51,10 @@ public class BatController : MonoBehaviour
     private void WingFlapOnperformed(InputAction.CallbackContext obj)
     {
         Debug.Log("FLAP FLAP");
-        var moveDir = new Vector3(m_wingDir.x, m_wingFlapDir.y, 0);
+        var moveDir = new Vector3(0, m_wingFlapDir.y, 0); // flap only move upward using force
         m_rigidbody.AddForce(moveDir * m_wingFlapForce,ForceMode2D.Impulse);
+        flapSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Flap");
+        flapSoundInstance.start();
     }
 
     // Start is called before the first frame update
@@ -62,5 +68,8 @@ public class BatController : MonoBehaviour
     {
         m_wingDir = m_batControls.Gameplay.Direction.ReadValue<Vector2>();
         m_mousePosition = m_batControls.Gameplay.MousePosition.ReadValue<Vector2>();
+        var originPos = m_rigidbody.transform.position;
+        var inputPos = new Vector3(m_wingDir.x*velocity, 0, 0);
+        m_rigidbody.transform.position = originPos + inputPos;
     }
 }
