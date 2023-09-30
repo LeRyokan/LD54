@@ -24,6 +24,8 @@ public class BatController : MonoBehaviour
 
     private FMOD.Studio.EventInstance flapSoundInstance;
     private FMOD.Studio.EventInstance hitWallSoundInstance;
+    private FMOD.Studio.EventInstance finishScreamInstance;
+    private FMOD.Studio.EventInstance sonarScreamInstance;
     
     private void Awake()
     {
@@ -32,7 +34,6 @@ public class BatController : MonoBehaviour
         
         //Init animations
         m_animator.SetBool("CanSonar",true);
-        
     }
     private void OnEnable()
     {
@@ -57,6 +58,8 @@ public class BatController : MonoBehaviour
             m_animator.SetTrigger("Sonar");
             StartCoroutine(m_sonarWave.ShootSonarAndFade(transform.position, computeDir.normalized));
             StartCoroutine(CooldownSonarAnim());
+            sonarScreamInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Scream");
+            sonarScreamInstance.start();
         }
     }
 
@@ -123,5 +126,15 @@ public class BatController : MonoBehaviour
     public void Death() {
         // TODO
         m_isDead = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            Debug.Log("FINISH");
+            finishScreamInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Finish");
+            finishScreamInstance.start();
+        }
     }
 }

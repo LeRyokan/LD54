@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BatController m_playerBat;
     [SerializeField] private List<StartZone> m_levelStartZoneList;
     public int m_currentLevel = 0;
-    
+    private FMOD.Studio.EventInstance instance;
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
         DOTween.Init();
-        if (Instance != null && Instance != this) 
+        if (Instance != null && Instance != this)
         { 
             Destroy(this);
         } 
@@ -39,11 +39,11 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         m_currentLevel++;
-
+        PlayerCamera.Instance.backgroundMusicInstance.setParameterByName("Music Track", m_currentLevel);
         if (m_currentLevel < m_levelStartZoneList.Count)
         {
             MoveBatToSpawn(m_currentLevel);
-        }
+}
         else
         {
             LoadEndGameScreen();
