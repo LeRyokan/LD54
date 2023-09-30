@@ -14,6 +14,7 @@ public class BatController : MonoBehaviour
     [SerializeField] private float m_wingFlapForce;
     [SerializeField] private Vector2 m_wingDir;
     [SerializeField] private bool m_isDead;
+    [SerializeField] private bool m_finishGame;
     [SerializeField] private SonarWave m_sonarWave;
     [SerializeField] private Animator m_animator;
     [SerializeField] private SpriteRenderer m_spriteRenderer;
@@ -165,8 +166,17 @@ public class BatController : MonoBehaviour
         m_batControls.Gameplay.Direction.Enable();
     }
     
-    public void Death() {
-        // TODO
+    public void Death()
+    {
+        if (m_finishGame)
+            return;
+        
+        GameManager.Instance.ShowDeadScreen();
         m_isDead = true;
+    }
+
+    public void FinishGame()
+    {
+        m_finishGame = true;
     }
 }
