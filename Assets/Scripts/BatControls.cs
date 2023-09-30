@@ -53,6 +53,15 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""daf21a05-463e-4ecc-98c8-ae03286efa47"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -125,11 +134,33 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f525e7df-ac26-478c-a4ce-85b55f42008f"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Mouse>/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Sonar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""757e508c-e247-4123-939a-4e3ea2d0bf49"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Sonar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f48a5bfa-a6eb-4750-a61e-b427fc0b6555"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -140,7 +171,18 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         {
             ""name"": ""Keyboard"",
             ""bindingGroup"": ""Keyboard"",
-            ""devices"": []
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -149,6 +191,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         m_Gameplay_WingFlap = m_Gameplay.FindAction("WingFlap", throwIfNotFound: true);
         m_Gameplay_Direction = m_Gameplay.FindAction("Direction", throwIfNotFound: true);
         m_Gameplay_Sonar = m_Gameplay.FindAction("Sonar", throwIfNotFound: true);
+        m_Gameplay_MousePosition = m_Gameplay.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -213,6 +256,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_WingFlap;
     private readonly InputAction m_Gameplay_Direction;
     private readonly InputAction m_Gameplay_Sonar;
+    private readonly InputAction m_Gameplay_MousePosition;
     public struct GameplayActions
     {
         private @BatControls m_Wrapper;
@@ -220,6 +264,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         public InputAction @WingFlap => m_Wrapper.m_Gameplay_WingFlap;
         public InputAction @Direction => m_Wrapper.m_Gameplay_Direction;
         public InputAction @Sonar => m_Wrapper.m_Gameplay_Sonar;
+        public InputAction @MousePosition => m_Wrapper.m_Gameplay_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -238,6 +283,9 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
             @Sonar.started += instance.OnSonar;
             @Sonar.performed += instance.OnSonar;
             @Sonar.canceled += instance.OnSonar;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -251,6 +299,9 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
             @Sonar.started -= instance.OnSonar;
             @Sonar.performed -= instance.OnSonar;
             @Sonar.canceled -= instance.OnSonar;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -282,5 +333,6 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         void OnWingFlap(InputAction.CallbackContext context);
         void OnDirection(InputAction.CallbackContext context);
         void OnSonar(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }
