@@ -15,7 +15,9 @@ public class BatController : MonoBehaviour
     [SerializeField] private Vector2 m_wingDir;
     [SerializeField] private Vector2 m_mousePosition;
     [SerializeField] private SonarWave m_sonarWave;
-
+    [SerializeField] private Animator m_animator;
+    [SerializeField] private SpriteRenderer m_spriteRenderer;
+    
     [SerializeField] private float velocity;
 
     private FMOD.Studio.EventInstance flapSoundInstance;
@@ -25,6 +27,10 @@ public class BatController : MonoBehaviour
     {
         m_batControls = new BatControls();
         m_batControls.Enable();
+        
+        //Init animations
+        m_animator.SetBool("CanSonar",true);
+        
     }
     private void OnEnable()
     {
@@ -43,14 +49,20 @@ public class BatController : MonoBehaviour
         
         //Lui donner le vecteur de direction par rapport a la position de la souris 
         var computeDir = new Vector3(mousePositionInWorld.x - transform.position.x,mousePositionInWorld.y - transform.position.y,0);
-        
-        StartCoroutine(m_sonarWave.ShootSonarAndFade(transform.position, computeDir.normalized));
+        if (!m_sonarWave.m_isInCooldown)
+        {
+            m_animator.SetBool("CanSonar",false);
+            m_animator.SetTrigger("Sonar");
+            StartCoroutine(m_sonarWave.ShootSonarAndFade(transform.position, computeDir.normalized));
+            StartCoroutine(CooldownSonarAnim());
+        }
     }
 
     private void WingFlapOnperformed(InputAction.CallbackContext obj)
     {
         var moveDir = new Vector3(0, m_wingFlapDir.y, 0); // flap only move upward using force
         m_rigidbody.AddForce(moveDir * m_wingFlapForce,ForceMode2D.Impulse);
+        m_animator.SetTrigger("Flap");
         flapSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Flap");
         flapSoundInstance.start();
     }
@@ -65,12 +77,26 @@ public class BatController : MonoBehaviour
     void Update()
     {
         m_wingDir = m_batControls.Gameplay.Direction.ReadValue<Vector2>();
+        if(m_wingDir.x < 0)
+        {
+            m_spriteRenderer.flipX = true;
+        }
+        else
+        {
+            m_spriteRenderer.flipX = false;
+        }
+        
         m_mousePosition = m_batControls.Gameplay.MousePosition.ReadValue<Vector2>();
         var originPos = m_rigidbody.transform.position;
         var inputPos = new Vector3(m_wingDir.x * velocity, 0, 0);
         m_rigidbody.transform.position = originPos + inputPos;
     }
 
+    public IEnumerator CooldownSonarAnim()
+    {
+        yield return new WaitForSeconds(2f);
+        m_animator.SetBool("CanSonar",true);
+    }
     public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.CompareTag("Wall"))

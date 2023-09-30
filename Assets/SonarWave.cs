@@ -12,7 +12,7 @@ public class SonarWave : MonoBehaviour
     [SerializeField] private float m_sonarMaxDistance; 
     [SerializeField] private float m_currentSonarDistance;
     [SerializeField] private Vector3 m_initialDirection;
-    [SerializeField] private bool m_isInCooldown;
+    [SerializeField] public bool m_isInCooldown;
     [SerializeField] private float m_shootCooldown = 2;
     [SerializeField] private float m_sonarForce;
     [SerializeField] private Transform m_graphics;

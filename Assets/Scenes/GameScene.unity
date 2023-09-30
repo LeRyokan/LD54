@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44671893, g: 0.49657547, b: 0.5750153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10318,10 +10318,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 293158584024742230, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
-      propertyPath: velocity
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 293158584024742230, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1059681741}
@@ -10329,6 +10325,14 @@ PrefabInstance:
       propertyPath: m_sonarWave
       value: 
       objectReference: {fileID: 4523789579319414057}
+    - target: {fileID: 4748728579955055608, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748728579955055608, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4813838606900722002, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -10340,6 +10344,14 @@ PrefabInstance:
     - target: {fileID: 6448205429987084512, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165038158600385157, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165038158600385157, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8327621783478227371, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
       propertyPath: m_Name
