@@ -29,15 +29,17 @@ public class BatController : MonoBehaviour
     
     private void Awake()
     {
-        m_batControls = new BatControls();
-        m_batControls.Enable();
         
-        //Init animations
-        m_animator.SetBool("CanSonar",true);
         
     }
     private void OnEnable()
     {
+        m_batControls = new BatControls();
+        m_batControls.Enable();
+                
+        //Init animations
+        m_animator.SetBool("CanSonar",true);
+        
         m_batControls.Gameplay.WingFlap.performed += WingFlapOnperformed;
         m_batControls.Gameplay.Sonar.performed += SonarOnperformed;
         m_batControls.Gameplay.LeaveSafeSpace.performed += LeaveSafeSpaceOnperformed;
