@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using DG.Tweening;
+using Unity.Collections;
 
 public class SonarWave : MonoBehaviour
 {
@@ -13,6 +15,10 @@ public class SonarWave : MonoBehaviour
     [SerializeField] private bool m_isInCooldown;
     [SerializeField] private float m_shootCooldown;
     [SerializeField] private float m_sonarForce;
+    [SerializeField] private Transform m_graphics;
+    [SerializeField] private GameObject m_maskArea;
+    
+    [Header("Sound design")]
     [SerializeField][Range(-64f, 64f)] private float panning;
 
     [SerializeField] private BatController m_bat;
@@ -47,13 +53,16 @@ public class SonarWave : MonoBehaviour
         //TP le sonar sur la chauve souris
         transform.position = pos;
         m_initialDirection = dir;
+        m_rigidbody2D.velocity = Vector2.zero;
         m_rigidbody2D.AddForce(m_initialDirection * m_sonarForce,ForceMode2D.Impulse);
+        m_graphics.up = m_initialDirection;
     }
 
     public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.CompareTag("Wall"))
         {
+            RevealWallOnHit(col.contacts[0].point);
             ReflectProjectile(m_rigidbody2D, col.contacts[0].normal);
             playSoundOnSonarCollision(col, "event:/Char/Bat/Sonar"); // should be event:/Environnement/Wall/SonarDetect
         }
@@ -63,9 +72,25 @@ public class SonarWave : MonoBehaviour
     {    
         Debug.Log($"NORMAL OF THE WALL IS : {reflectVector}");
         m_initialDirection = Vector3.Reflect(m_initialDirection, reflectVector);
+        m_graphics.up = m_initialDirection;
         rb.velocity = m_initialDirection;
     }
 
+    public void RevealWallOnHit(Vector2 pos)
+    {
+        var currentMask = Instantiate(m_maskArea,pos,Quaternion.identity);
+        
+        currentMask.transform.localScale = new Vector3(1,1,1);
+        currentMask.SetActive(true);
+        currentMask.transform.DOScale(10f, 2f).OnComplete(() => DestroyMask(currentMask));
+    }
+
+    public void DestroyMask(GameObject obj)
+    {
+        obj.SetActive(false);
+        Destroy(obj);
+    }
+    
     public void playSoundOnSonarCollision(Collision2D col, string collidedObjectEvent)
     {
         // collision tag must be one of (wall, ennemy or safe space)
