@@ -17,8 +17,12 @@ public class EndZone : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        throw new NotImplementedException();
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("END LEVEL REACHED");    
+            GameManager.Instance.LoadNextLevel();
+        }
     }
 }

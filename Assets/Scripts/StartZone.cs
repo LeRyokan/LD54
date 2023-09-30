@@ -6,11 +6,11 @@ using UnityEngine;
 public class StartZone : MonoBehaviour
 {
 
-    [SerializeField] private BatController playerBat;
+    [SerializeField] private BatController m_playerBat;
 
     private void Awake()
     {
-        playerBat.transform.position = transform.position;
+        
     }
 
 
