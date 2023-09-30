@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
     {
         var nextPos = m_levelStartZoneList[id];
         m_playerBat.transform.position = nextPos.transform.position;
+        m_playerBat.ActivateSafeSpace();
     }
 
     private void LoadEndGameScreen()

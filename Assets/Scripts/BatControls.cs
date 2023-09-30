@@ -62,6 +62,15 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LeaveSafeSpace"",
+                    ""type"": ""Button"",
+                    ""id"": ""45015c1f-ba5b-40c3-a913-5b8400be7890"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -163,6 +172,17 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0769e5b-37ac-4eee-be78-b48a089b6a94"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""LeaveSafeSpace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -192,6 +212,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         m_Gameplay_Direction = m_Gameplay.FindAction("Direction", throwIfNotFound: true);
         m_Gameplay_Sonar = m_Gameplay.FindAction("Sonar", throwIfNotFound: true);
         m_Gameplay_MousePosition = m_Gameplay.FindAction("MousePosition", throwIfNotFound: true);
+        m_Gameplay_LeaveSafeSpace = m_Gameplay.FindAction("LeaveSafeSpace", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -257,6 +278,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Direction;
     private readonly InputAction m_Gameplay_Sonar;
     private readonly InputAction m_Gameplay_MousePosition;
+    private readonly InputAction m_Gameplay_LeaveSafeSpace;
     public struct GameplayActions
     {
         private @BatControls m_Wrapper;
@@ -265,6 +287,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         public InputAction @Direction => m_Wrapper.m_Gameplay_Direction;
         public InputAction @Sonar => m_Wrapper.m_Gameplay_Sonar;
         public InputAction @MousePosition => m_Wrapper.m_Gameplay_MousePosition;
+        public InputAction @LeaveSafeSpace => m_Wrapper.m_Gameplay_LeaveSafeSpace;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -286,6 +309,9 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @LeaveSafeSpace.started += instance.OnLeaveSafeSpace;
+            @LeaveSafeSpace.performed += instance.OnLeaveSafeSpace;
+            @LeaveSafeSpace.canceled += instance.OnLeaveSafeSpace;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -302,6 +328,9 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @LeaveSafeSpace.started -= instance.OnLeaveSafeSpace;
+            @LeaveSafeSpace.performed -= instance.OnLeaveSafeSpace;
+            @LeaveSafeSpace.canceled -= instance.OnLeaveSafeSpace;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -334,5 +363,6 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         void OnDirection(InputAction.CallbackContext context);
         void OnSonar(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnLeaveSafeSpace(InputAction.CallbackContext context);
     }
 }
