@@ -1,0 +1,1007 @@
+fileFormatVersion: 2
+guid: d28b62aefef80924b8b46353747f8d11
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3631e394f8e9eb4d98ebd24a2169351
+      internalID: 1623549281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e1ccfe0d6804245b65a24b53fe8515
+      internalID: 1645272453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6416cb24472a3a04987b1d02e11ee393
+      internalID: -1680429727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9c550091a952f44b23c00eab5d8efd
+      internalID: -1995757592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f46f22c29399b84e95af32b3887217b
+      internalID: 1005049583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a4ac49f64cbcb48b80c5535a0db3f1
+      internalID: 775272421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6eb5e74d7edd649be07c487be6f2db
+      internalID: -511136113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 2848
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8286973aba353a640866d5d59997ba5d
+      internalID: 1911252098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6020acd7a711844488fd9b9a2e5e217
+      internalID: -1269331477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6495b7edbcb96344ac7517e708bf844
+      internalID: -1074733684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55bfb6023ff651449aefa360bd2c75d
+      internalID: 783751386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da6574765df95a4ebe7d880e2bd38ea
+      internalID: 746191503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fddf3cd34cac243ac437e30e32cc6f
+      internalID: 310908995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5c21e5f14370f4ea3fb2c26224daf0
+      internalID: 167803607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e72156c9eba5064da4a9a9854e095ee
+      internalID: 1514921886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 2136
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca480f681a871a4aba86e7ef626be59
+      internalID: 1896462675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4defd06b908d240b1e2a070a57afec
+      internalID: 2027315791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f9111d79c610d44bf93e10b1e47083
+      internalID: 1274707650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663f85c746c04b743b070e579c309519
+      internalID: 562063860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cec116bd53a5f4e858e4ef3fd6612c
+      internalID: 1141223903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe65b78b748e9147bd36939dd2bbaa6
+      internalID: 2018560442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343f80bcf1409084ba3a79490652351c
+      internalID: -247772809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b712d07e2d33f45aaf0d7f0b32a1bf
+      internalID: -1624752552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 1424
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29b5d9d8c6470942ad567a9859d1cc4
+      internalID: -674310376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c543f4555614aec41aeeff5e1dbe7cfa
+      internalID: 776279253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8334504ac518fe48bd1281721f71550
+      internalID: 1179307387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1c738262d7ba645bbd71f7afbba6f7
+      internalID: 272231997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20727045e98789943b4b77145189ded7
+      internalID: -23955250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9146d3dc9737fbc4cb6b842faedefee1
+      internalID: 1179225498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a107ae2130aa9948850c8d1a4c50f8f
+      internalID: 1723034079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0dd96467757984f922aeb17053f86b
+      internalID: 1774220612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 712
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ad13c36a326904c8cf157e4bc587c4
+      internalID: 1369560640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668be270729cf4143aef8aeae1158173
+      internalID: 1643772480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27dafb60336ceb4e8e8f786148e4104
+      internalID: 2070807381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e63538162b17c348a4772518ee55df0
+      internalID: 441127081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94171aae1cfd5c418912db7d2049fe5
+      internalID: 1846923720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4fa881dcaad17499789b4fa47efeea
+      internalID: -2073154691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d37b82db7f49c4cbcd56acff5c4575
+      internalID: -1253403780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd7235b8960e40409a9043ece1a4a0d
+      internalID: -1915865668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-sonar_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 0
+        width: 508
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955913b459303994c9e5f933734b6764
+      internalID: 1064715627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fd869e96cf338f04f9b1e73471e8342d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bat-sonar_spritesheet_0: 1623549281
+      bat-sonar_spritesheet_1: 1645272453
+      bat-sonar_spritesheet_10: 783751386
+      bat-sonar_spritesheet_11: 746191503
+      bat-sonar_spritesheet_12: 310908995
+      bat-sonar_spritesheet_13: 167803607
+      bat-sonar_spritesheet_14: 1514921886
+      bat-sonar_spritesheet_15: 1896462675
+      bat-sonar_spritesheet_16: 2027315791
+      bat-sonar_spritesheet_17: 1274707650
+      bat-sonar_spritesheet_18: 562063860
+      bat-sonar_spritesheet_19: 1141223903
+      bat-sonar_spritesheet_2: -1680429727
+      bat-sonar_spritesheet_20: 2018560442
+      bat-sonar_spritesheet_21: -247772809
+      bat-sonar_spritesheet_22: -1624752552
+      bat-sonar_spritesheet_23: -674310376
+      bat-sonar_spritesheet_24: 776279253
+      bat-sonar_spritesheet_25: 1179307387
+      bat-sonar_spritesheet_26: 272231997
+      bat-sonar_spritesheet_27: -23955250
+      bat-sonar_spritesheet_28: 1179225498
+      bat-sonar_spritesheet_29: 1723034079
+      bat-sonar_spritesheet_3: -1995757592
+      bat-sonar_spritesheet_30: 1774220612
+      bat-sonar_spritesheet_31: 1369560640
+      bat-sonar_spritesheet_32: 1643772480
+      bat-sonar_spritesheet_33: 2070807381
+      bat-sonar_spritesheet_34: 441127081
+      bat-sonar_spritesheet_35: 1846923720
+      bat-sonar_spritesheet_36: -2073154691
+      bat-sonar_spritesheet_37: -1253403780
+      bat-sonar_spritesheet_38: -1915865668
+      bat-sonar_spritesheet_39: 1064715627
+      bat-sonar_spritesheet_4: 1005049583
+      bat-sonar_spritesheet_5: 775272421
+      bat-sonar_spritesheet_6: -511136113
+      bat-sonar_spritesheet_7: 1911252098
+      bat-sonar_spritesheet_8: -1269331477
+      bat-sonar_spritesheet_9: -1074733684
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
