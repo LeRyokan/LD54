@@ -87,7 +87,7 @@ public class SonarWave : MonoBehaviour
         // reset value so if next collision is up/bottom only the sound is centered
         panning = 0;
         instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
-        if(col.transform.CompareTag("Wall"))
+        if(col.transform.CompareTag("Wall") || col.transform.CompareTag("DeathWall"))
         {
             Vector2 hit = col.contacts[0].normal;
             instance = FMODUnity.RuntimeManager.CreateInstance(collidedObjectEvent);

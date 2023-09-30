@@ -13,6 +13,7 @@ public class BatController : MonoBehaviour
     [SerializeField] private Vector3 m_wingFlapDir;
     [SerializeField] private float m_wingFlapForce;
     [SerializeField] private Vector2 m_wingDir;
+    [SerializeField] private bool m_isDead;
     [SerializeField] private Vector2 m_mousePosition;
     [SerializeField] private SonarWave m_sonarWave;
     [SerializeField] private Animator m_animator;
@@ -103,6 +104,14 @@ public class BatController : MonoBehaviour
         {
             hitWallSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Hit");
             hitWallSoundInstance.start();
+        } else if (col.transform.CompareTag("DeathWall")) {
+            Death();
+            Debug.Log("Player is dead");
         }
+    }
+
+    public void Death() {
+        // TODO
+        m_isDead = true;
     }
 }
