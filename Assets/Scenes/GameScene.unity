@@ -10076,6 +10076,30 @@ PrefabInstance:
       propertyPath: m_maskArea
       value: 
       objectReference: {fileID: 4211906116529881981, guid: a684b7b4dc6b40a4eb5d6ac36814ae6b, type: 3}
+    - target: {fileID: 271829350783179614, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_shootCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 654628265548231938, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654628265548231938, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 654628265548231938, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 8adcd86f64be0409a9a1d482c6901dec, type: 2}
+    - target: {fileID: 654628265548231938, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 654628265548231938, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1140155624968613258, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10144,6 +10168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SonarWave
       objectReference: {fileID: 0}
+    - target: {fileID: 3835913016428787122, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10151,6 +10179,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3181471077776652804, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4523789579319414059}
+    - targetCorrespondingSourceObject: {fileID: 3181471077776652804, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4523789579319414062}
   m_SourcePrefab: {fileID: 100100000, guid: 7124a5dc315680a419fadf8972c91ea6, type: 3}
 --- !u!114 &4523789579319414057 stripped
 MonoBehaviour:
@@ -10199,6 +10230,41 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: -1
   OverrideMaxDistance: -1
+--- !u!58 &4523789579319414062
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523789579319414058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8adcd86f64be0409a9a1d482c6901dec, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3
 --- !u!1001 &7787863903605532513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10250,6 +10316,10 @@ PrefabInstance:
     - target: {fileID: 34529118387354166, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293158584024742230, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
+      propertyPath: velocity
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 293158584024742230, guid: 81834e234035b744fbf22107dae8dab9, type: 3}
       propertyPath: mainCamera

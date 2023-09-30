@@ -40,18 +40,15 @@ public class BatController : MonoBehaviour
     private void SonarOnperformed(InputAction.CallbackContext obj)
     {
         var mousePositionInWorld = mainCamera.ScreenToWorldPoint(m_mousePosition);
-        Debug.Log($"Sonar Send at pos : {mousePositionInWorld}" );
         
         //Lui donner le vecteur de direction par rapport a la position de la souris 
         var computeDir = new Vector3(mousePositionInWorld.x - transform.position.x,mousePositionInWorld.y - transform.position.y,0);
-        Debug.Log($"Sonar direction : {computeDir}" );
         
-        m_sonarWave.ShootSonar(transform.position,computeDir.normalized);
+        StartCoroutine(m_sonarWave.ShootSonarAndFade(transform.position, computeDir.normalized));
     }
 
     private void WingFlapOnperformed(InputAction.CallbackContext obj)
     {
-        Debug.Log("FLAP FLAP");
         var moveDir = new Vector3(0, m_wingFlapDir.y, 0); // flap only move upward using force
         m_rigidbody.AddForce(moveDir * m_wingFlapForce,ForceMode2D.Impulse);
         flapSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Flap");

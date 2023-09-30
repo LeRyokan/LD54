@@ -21,7 +21,6 @@ public class EndZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("END LEVEL REACHED");    
             GameManager.Instance.LoadNextLevel();
         }
     }

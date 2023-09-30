@@ -13,7 +13,7 @@ public class SonarWave : MonoBehaviour
     [SerializeField] private float m_currentSonarDistance;
     [SerializeField] private Vector3 m_initialDirection;
     [SerializeField] private bool m_isInCooldown;
-    [SerializeField] private float m_shootCooldown;
+    [SerializeField] private float m_shootCooldown = 2;
     [SerializeField] private float m_sonarForce;
     [SerializeField] private Transform m_graphics;
     [SerializeField] private GameObject m_maskArea;
@@ -48,16 +48,6 @@ public class SonarWave : MonoBehaviour
         
     }
 
-    public void ShootSonar(Vector3 pos, Vector3 dir)
-    {
-        //TP le sonar sur la chauve souris
-        transform.position = pos;
-        m_initialDirection = dir;
-        m_rigidbody2D.velocity = Vector2.zero;
-        m_rigidbody2D.AddForce(m_initialDirection * m_sonarForce,ForceMode2D.Impulse);
-        m_graphics.up = m_initialDirection;
-    }
-
     public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.CompareTag("Wall"))
@@ -70,10 +60,9 @@ public class SonarWave : MonoBehaviour
     
     private void ReflectProjectile(Rigidbody2D rb, Vector3 reflectVector)
     {    
-        Debug.Log($"NORMAL OF THE WALL IS : {reflectVector}");
         m_initialDirection = Vector3.Reflect(m_initialDirection, reflectVector);
         m_graphics.up = m_initialDirection;
-        rb.velocity = m_initialDirection;
+        // rb.velocity = m_initialDirection;
     }
 
     public void RevealWallOnHit(Vector2 pos)
@@ -109,18 +98,40 @@ public class SonarWave : MonoBehaviour
                 if (hit.x < 0f)
                 {
                     // Right panning
-                    panning = distanceX * 10;
+                    panning = distanceX * 1000;
                 } else if (distanceX > 0f)
                 {
                     // Left panning
-                    panning = distanceX * 10;
+                    panning = distanceX * 1000;
                 }
             }
             instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
             var distanceBetweenBatAndCollider = Vector3.Distance(m_bat.transform.position, transform.position);
-            Debug.Log(distanceBetweenBatAndCollider);
             instance.setParameterByName("Volume", distanceBetweenBatAndCollider);
             instance.start();
+        }
+    }
+
+    public IEnumerator ShootSonarAndFade(Vector3 pos, Vector3 dir)
+    {
+        if (m_isInCooldown)
+        {
+            yield return null;
+        } else 
+        {
+            m_isInCooldown = true;
+            m_rigidbody2D.gameObject.SetActive(true);
+
+            //TP le sonar sur la chauve souris
+            transform.position = pos;
+            m_initialDirection = dir;
+            m_rigidbody2D.velocity = Vector2.zero;
+            m_rigidbody2D.AddForce(m_initialDirection * m_sonarForce,ForceMode2D.Impulse);
+            m_graphics.up = m_initialDirection;
+            yield return new WaitForSeconds(m_shootCooldown);
+
+            m_rigidbody2D.gameObject.SetActive(false);
+            m_isInCooldown = false;
         }
     }
 }
