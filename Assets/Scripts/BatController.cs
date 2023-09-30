@@ -27,6 +27,8 @@ public class BatController : MonoBehaviour
     private Vector2 m_mousePosition;
     private FMOD.Studio.EventInstance flapSoundInstance;
     private FMOD.Studio.EventInstance hitWallSoundInstance;
+    private FMOD.Studio.EventInstance finishScreamInstance;
+    private FMOD.Studio.EventInstance sonarScreamInstance;
     
     private void Awake()
     {
@@ -79,6 +81,8 @@ public class BatController : MonoBehaviour
             m_animator.SetTrigger("Sonar");
             StartCoroutine(m_sonarWave.ShootSonarAndFade(transform.position, computeDir.normalized));
             StartCoroutine(CooldownSonarAnim());
+            sonarScreamInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Scream");
+            sonarScreamInstance.start();
         }
     }
 

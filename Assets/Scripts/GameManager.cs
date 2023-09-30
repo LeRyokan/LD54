@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
          InGame
     }
     
+    private FMOD.Studio.EventInstance instance;
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
@@ -105,11 +106,11 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         m_currentLevel++;
-
+        PlayerCamera.Instance.backgroundMusicInstance.setParameterByName("Music Track", m_currentLevel);
         if (m_currentLevel < m_levelStartZoneList.Count)
         {
             MoveBatToSpawn(m_currentLevel);
-        }
+}
         else
         {
             LoadEndGameScreen();

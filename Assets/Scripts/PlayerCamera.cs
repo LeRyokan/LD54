@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance backgroundMusicInstance;
-    private float levelNumber = 0;
-    // m_currentLevel = 0 for first level, 1 for 2nd level, and on so on
- 
+    public static PlayerCamera Instance { get; private set; }
+    public FMOD.Studio.EventInstance backgroundMusicInstance;
+    private FMOD.Studio.EventInstance randomStressInstance;
+    private void Awake() 
+    { 
+        // If there is an instance, and it's not me, delete myself.
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this);
+        } 
+        else 
+        { 
+            Instance = this; 
+        } 
+    }
     // Start is called before the first frame update
     void Start()
     {
-        levelNumber = GameManager.Instance.m_currentLevel;
         backgroundMusicInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Levels");
         backgroundMusicInstance.start();
+        randomStressInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Environnement/SFX/RandomStress");
+        randomStressInstance.start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        levelNumber = GameManager.Instance.m_currentLevel;
-        backgroundMusicInstance.setParameterByName("Playing Track", levelNumber);
+
     }
 }
