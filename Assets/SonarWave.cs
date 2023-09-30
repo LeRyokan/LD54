@@ -94,11 +94,11 @@ public class SonarWave : MonoBehaviour
     public void playSoundOnSonarCollision(Collision2D col, string collidedObjectEvent)
     {
         // collision tag must be one of (wall, ennemy or safe space)
-        string[] colliders = { "TilemapWall", "Ennemy", "SafeSpace" };
+        // string[] colliders = { "TilemapWall", "Ennemy", "SafeSpace" };
         // reset value so if next collision is up/bottom only the sound is centered
         panning = 0;
         instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
-        if(colliders.Any(col.gameObject.name.Contains))
+        if(col.transform.CompareTag("Wall"))
         {
             Vector2 hit = col.contacts[0].normal;
             instance = FMODUnity.RuntimeManager.CreateInstance(collidedObjectEvent);
