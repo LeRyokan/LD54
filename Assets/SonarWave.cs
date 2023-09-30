@@ -9,12 +9,13 @@ using Unity.Collections;
 public class SonarWave : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D m_rigidbody2D;
-    [SerializeField] private float m_sonarMaxDistance; 
-    [SerializeField] private float m_currentSonarDistance;
-    [SerializeField] private Vector3 m_initialDirection;
+    //[SerializeField] private float m_sonarMaxDistance; 
+    //[SerializeField] private float m_currentSonarDistance;
+    private Vector3 m_initialDirection;
     [SerializeField] public bool m_isInCooldown;
     [SerializeField] private float m_shootCooldown = 2;
     [SerializeField] private float m_sonarForce;
+    [SerializeField] private float m_sonarFinalScale;
     [SerializeField] private Transform m_graphics;
     [SerializeField] private GameObject m_maskArea;
     
@@ -25,29 +26,7 @@ public class SonarWave : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
 
     private Vector3 m_velocity;
-
-    private void OnEnable()
-    {
-        throw new NotImplementedException();
-    }
-
-    private void OnDisable()
-    {
-        throw new NotImplementedException();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.CompareTag("Wall"))
@@ -71,7 +50,7 @@ public class SonarWave : MonoBehaviour
         
         currentMask.transform.localScale = new Vector3(1,1,1);
         currentMask.SetActive(true);
-        currentMask.transform.DOScale(10f, 2f).OnComplete(() => DestroyMask(currentMask));
+        currentMask.transform.DOScale(m_sonarFinalScale, 2f).OnComplete(() => DestroyMask(currentMask));
     }
 
     public void DestroyMask(GameObject obj)

@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "LeaveSafeSpace",
+                    "type": "Button",
+                    "id": "45015c1f-ba5b-40c3-a913-5b8400be7890",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -139,6 +148,45 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0769e5b-37ac-4eee-be78-b48a089b6a94",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "LeaveSafeSpace",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "713dc4d8-f64c-4059-8088-d3614de748ac",
+            "actions": [
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "92e3b4b8-c77d-458a-ad9b-bcf8dcb76e9d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "72a55ae5-6831-4836-85d2-523a6a28b0fc",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
