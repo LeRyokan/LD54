@@ -20,6 +20,7 @@ public class BatController : MonoBehaviour
     [SerializeField] private SpriteRenderer m_spriteRenderer;
     
     [SerializeField] private float velocity;
+   
 
     private FMOD.Studio.EventInstance flapSoundInstance;
     private FMOD.Studio.EventInstance hitWallSoundInstance;
@@ -95,7 +96,16 @@ public class BatController : MonoBehaviour
 
     public IEnumerator CooldownSonarAnim()
     {
-        yield return new WaitForSeconds(2f);
+        m_rigidbody.gravityScale = 0f;
+        m_rigidbody.velocity = Vector2.zero;
+        m_batControls.Disable();
+        
+        yield return new WaitForSeconds(1f);
+        
+         m_batControls.Enable();
+        m_rigidbody.gravityScale = 1f;
+        
+        yield return new WaitForSeconds(1f);
         m_animator.SetBool("CanSonar",true);
     }
     public void OnCollisionEnter2D(Collision2D col)
