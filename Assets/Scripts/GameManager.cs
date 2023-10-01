@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,8 @@ public class GameManager : MonoBehaviour
     private BatControls m_batControls;
     public static GameManager Instance { get; private set; }
     [SerializeField] private BatController m_playerBat;
-    [SerializeField] private List<StartZone> m_levelStartZoneList;
+    [SerializeField] private List<LevelInfo> m_levelStartZoneList;
+    [SerializeField] private List<GameObject> m_instanciatedLevels;
     [SerializeField] private CanvasGroup m_canvasGroupIntro;
     [SerializeField] private CanvasGroup m_canvasGroupEnd;
     [SerializeField] private CanvasGroup m_canvasGroupLoose;
@@ -40,7 +42,10 @@ public class GameManager : MonoBehaviour
         else 
         { 
             Instance = this; 
-        } 
+        }
+
+        //m_instanciatedLevels = new List<GameObject>();
+
     }
 
     private void OnEnable()
@@ -72,55 +77,65 @@ public class GameManager : MonoBehaviour
                 m_canvasGroupInGame.DOFade(1f, 1f);
                 break;
             case UI_State.Dead:
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 m_canvasGroupLoose.interactable = false;
                 m_canvasGroupLoose.blocksRaycasts = false;
                 m_canvasGroupLoose.DOFade(0f, 1f);
+                LoadLevelAndSetPlayerSpawn();
                 break;
             case UI_State.End:
                 m_canvasGroupEnd.interactable = false;
                 m_canvasGroupEnd.blocksRaycasts = false;
                 m_canvasGroupEnd.DOFade(0f, 1f);
-                RetryFromCurrentLevel();
+                Application.Quit();
                 break;
         }
 
         m_currentState = UI_State.InGame;
-
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        MoveBatToSpawn(0);
+        LoadLevelAndSetPlayerSpawn();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void LoadNextLevel()
+    public void LoadNextLevels()
     {
         m_currentLevel++;
         PlayerCamera.Instance.backgroundMusicInstance.setParameterByName("Music Track", m_currentLevel);
         if (m_currentLevel < m_levelStartZoneList.Count)
         {
-            MoveBatToSpawn(m_currentLevel);
-}
+            LoadLevelAndSetPlayerSpawn();
+        }
         else
         {
             LoadEndGameScreen();
         }
     }
-
-    private void MoveBatToSpawn(int id)
+    
+    //DEPRECATED
+    /*public void LoadNextLevel()
     {
-        var nextPos = m_levelStartZoneList[id];
+        m_currentLevel++;
+        PlayerCamera.Instance.backgroundMusicInstance.setParameterByName("Music Track", m_currentLevel);
+        if (m_currentLevel < m_levelStartZoneList.Count)
+        {
+            Instantiate(m_levelStartZoneList[m_currentLevel].gameObject,new Vector3(0,0,0),quaternion.identity);
+            MoveBatToSpawn(m_currentLevel);
+        }
+        else
+        {
+            LoadEndGameScreen();
+        }
+    }*/
+
+    //DEPRECATED
+    /*private void MoveBatToSpawn(int id)
+    {
+        var nextPos = m_levelStartZoneList[id].playerSpawn;
         m_playerBat.transform.position = nextPos.transform.position;
         m_playerBat.ActivateSafeSpace();
-    }
+    }*/
 
     private void LoadEndGameScreen()
     {
@@ -145,8 +160,19 @@ public class GameManager : MonoBehaviour
         m_canvasGroupLoose.DOFade(1f, 1f);
     }
 
-    private void RetryFromCurrentLevel()
+    private void LoadLevelAndSetPlayerSpawn()
     {
+        var currentLevel = Instantiate(m_levelStartZoneList[m_currentLevel].gameObject,new Vector3(0,0,0),quaternion.identity);
+        m_instanciatedLevels.Add(currentLevel);
+        var nextPos = currentLevel.GetComponent<LevelInfo>().playerSpawn;
+        m_playerBat.transform.position = nextPos.transform.position;
+        m_playerBat.ActivateSafeSpace();
         
+        //Destroy previous level
+        if (m_currentLevel >= 1)
+        {
+            var previouslevel = m_currentLevel - 1;
+            m_instanciatedLevels[previouslevel].SetActive(false);
+        }
     }
 }

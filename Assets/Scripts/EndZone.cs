@@ -21,7 +21,7 @@ public class EndZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.LoadNextLevel();
+            GameManager.Instance.LoadNextLevels();
         }
     }
 }
