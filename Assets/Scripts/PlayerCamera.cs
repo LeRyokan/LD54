@@ -7,6 +7,7 @@ public class PlayerCamera : MonoBehaviour
     public static PlayerCamera Instance { get; private set; }
     public FMOD.Studio.EventInstance backgroundMusicInstance;
     private FMOD.Studio.EventInstance randomStressInstance;
+    private FMOD.Studio.EventInstance ambienceInstance;
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
@@ -26,6 +27,8 @@ public class PlayerCamera : MonoBehaviour
         backgroundMusicInstance.start();
         randomStressInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Environnement/SFX/RandomStress");
         randomStressInstance.start();
+        ambienceInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Environnement/Ambience");
+        ambienceInstance.start();
     }
 
     // Update is called once per frame

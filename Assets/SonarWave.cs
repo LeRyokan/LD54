@@ -26,6 +26,8 @@ public class SonarWave : MonoBehaviour
     [Header("Sound design")]
     [SerializeField][Range(-64f, 64f)] private float panning;
     private FMOD.Studio.EventInstance instance;
+    private FMOD.Studio.EventInstance detectSafeSpaceInstance;
+    private FMOD.Studio.EventInstance RevealInOutInstance;
 
     public void OnCollisionEnter2D(Collision2D col)
     {
@@ -33,7 +35,7 @@ public class SonarWave : MonoBehaviour
         {
             RevealWallOnHit(col.contacts[0].point);
             ReflectProjectile(m_rigidbody2D, col.contacts[0].normal);
-            playSoundOnSonarCollision(col, "event:/Char/Bat/Sonar"); // should be event:/Environnement/Wall/SonarDetect
+            playSoundOnSonarCollision(col, "event:/Char/Bat/Sonar Reveals Wall"); // should be event:/Environnement/Wall/SonarDetect
         }
     }
     
@@ -50,7 +52,8 @@ public class SonarWave : MonoBehaviour
         
         currentMask.transform.localScale = new Vector3(1,1,1);
         currentMask.SetActive(true);
-        // currentMask.transform.DOScale(m_sonarFinalScale, 2f).OnComplete(() => DestroyMask(currentMask));
+        RevealInOutInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Environnement/RevealInOut");
+        RevealInOutInstance.start();
         currentMask.transform.DOScale(m_sonarFinalScale, m_revealTime/2).OnComplete(() => 
             currentMask.transform.DOScale(0, m_revealTime).OnComplete(() => 
                 DestroyMask(currentMask)
@@ -91,8 +94,11 @@ public class SonarWave : MonoBehaviour
             }
             instance.setParameterByName("Pan (Wall Sonar Bounce)", panning);
             var distanceBetweenBatAndCollider = Vector3.Distance(m_bat.transform.position, transform.position);
-            instance.setParameterByName("Volume", distanceBetweenBatAndCollider);
             instance.start();
+        } else if (col.transform.CompareTag("SafeZone")) 
+        {
+            detectSafeSpaceInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Environnement/Safe Space/SonarDetect");
+            detectSafeSpaceInstance.start();
         }
     }
 

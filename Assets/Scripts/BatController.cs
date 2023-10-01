@@ -34,6 +34,7 @@ public class BatController : MonoBehaviour
     private Vector2 m_mousePosition;
     private FMOD.Studio.EventInstance flapSoundInstance;
     private FMOD.Studio.EventInstance hitWallSoundInstance;
+    private FMOD.Studio.EventInstance activeSafeSpaceInstance;
     private FMOD.Studio.EventInstance finishScreamInstance;
     private FMOD.Studio.EventInstance sonarScreamInstance;
     
@@ -85,7 +86,7 @@ public class BatController : MonoBehaviour
             m_animator.SetTrigger("Sonar");
             StartCoroutine(m_sonarWave.ShootSonarAndFade(transform.position, computeDir.normalized));
             StartCoroutine(CooldownSonarAnim());
-            sonarScreamInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Scream");
+            sonarScreamInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Sonar");
             sonarScreamInstance.start();
         }
     }
@@ -165,6 +166,9 @@ public class BatController : MonoBehaviour
             // colliding with a wall deactivate input controller for a short time
             // and pushes you away from the wall
             StartCoroutine(freezeBatAndPushBatOffTheWall(col));
+            // and decrease stamina
+            m_currentStamina -= m_staminaPerFlap;
+            UpdateStaminaBar();
             hitWallSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Hit");
             hitWallSoundInstance.start();
         } else if (col.transform.CompareTag("DeathWall")) {
@@ -203,6 +207,8 @@ public class BatController : MonoBehaviour
         m_batControls.Gameplay.Sonar.Disable();
         m_batControls.Gameplay.WingFlap.Disable();
         m_batControls.Gameplay.Direction.Disable();
+        activeSafeSpaceInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Environnement/Safe Space/Grapin");
+        activeSafeSpaceInstance.start();
     }
 
     public void DisableSafeSpace()
