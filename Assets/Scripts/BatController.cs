@@ -132,7 +132,7 @@ public class BatController : MonoBehaviour
         
         var originPos = m_rigidbody.transform.position;
         var inputPos = new Vector3(m_wingDir.x * velocity, 0, 0);
-        m_rigidbody.transform.position = originPos + inputPos;
+        m_rigidbody.transform.position = originPos + inputPos * Time.deltaTime;
 
         if (isInSafeSpace)
         {
