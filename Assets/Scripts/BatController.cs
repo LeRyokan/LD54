@@ -19,15 +19,15 @@ public class BatController : MonoBehaviour
     private Vector2 m_wingDir;
     private bool m_isDead;
     private bool m_finishGame;
-    private int m_staminaMax = 100;
-    private int m_currentStamina;
+    private float m_staminaMax = 100f;
+    private float m_currentStamina;
     public bool isInSafeSpace;
     
     [Header("Tweaking value")]
     [SerializeField] private Vector3 m_wingFlapDir;
     [SerializeField] private float m_wingFlapForce;
     [SerializeField] private float velocity;
-    [SerializeField] private int m_staminaPerFlap; 
+    [SerializeField] private float m_staminaPerFlap; 
 
     private Vector2 m_mousePosition;
     private FMOD.Studio.EventInstance flapSoundInstance;
@@ -131,7 +131,7 @@ public class BatController : MonoBehaviour
 
         if (isInSafeSpace)
         {
-            m_currentStamina++;
+            m_currentStamina += 0.2f;
             if (m_currentStamina > m_staminaMax)
             {
                 m_currentStamina = m_staminaMax;
@@ -201,11 +201,6 @@ public class BatController : MonoBehaviour
     public void FinishGame()
     {
         m_finishGame = true;
-    }
-
-    public IEnumerator SlowlyReloadStamina()
-    {
-        yield return null;
     }
 
     public void UpdateStaminaBar()

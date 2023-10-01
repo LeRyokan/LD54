@@ -8,25 +8,23 @@ using Unity.Collections;
 
 public class SonarWave : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D m_rigidbody2D;
-    //[SerializeField] private float m_sonarMaxDistance; 
-    //[SerializeField] private float m_currentSonarDistance;
+    public bool m_isInCooldown;
     private Vector3 m_initialDirection;
-    [SerializeField] public bool m_isInCooldown;
-    [SerializeField] private float m_shootCooldown = 2;
-    [SerializeField] private float m_sonarForce;
-    [SerializeField] private float m_sonarFinalScale;
+    private Vector3 m_velocity;
+    [SerializeField] private BatController m_bat;
+    [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private Transform m_graphics;
     [SerializeField] private GameObject m_maskArea;
     
+    [Header("Tweaking value")]
+    [SerializeField] private float m_shootCooldown = 2;
+    [SerializeField] private float m_sonarForce;
+    [SerializeField] private float m_sonarFinalScale;
+
     [Header("Sound design")]
     [SerializeField][Range(-64f, 64f)] private float panning;
-
-    [SerializeField] private BatController m_bat;
     private FMOD.Studio.EventInstance instance;
 
-    private Vector3 m_velocity;
-    
     public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.CompareTag("Wall"))

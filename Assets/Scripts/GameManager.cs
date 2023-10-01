@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CanvasGroup m_canvasGroupIntro;
     [SerializeField] private CanvasGroup m_canvasGroupEnd;
     [SerializeField] private CanvasGroup m_canvasGroupLoose;
+    [SerializeField] private CanvasGroup m_canvasGroupInGame;
     private UI_State m_currentState;
     public int m_currentLevel = 0;
     
@@ -31,9 +32,6 @@ public class GameManager : MonoBehaviour
     { 
         // If there is an instance, and it's not me, delete myself.
         DOTween.Init();
-        
-       
-        
         
         if (Instance != null && Instance != this) 
         { 
@@ -71,6 +69,7 @@ public class GameManager : MonoBehaviour
                 m_canvasGroupIntro.interactable = false;
                 m_canvasGroupIntro.blocksRaycasts = false;
                 m_canvasGroupIntro.DOFade(0f, 1f);
+                m_canvasGroupInGame.DOFade(1f, 1f);
                 break;
             case UI_State.Dead:
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -82,6 +81,7 @@ public class GameManager : MonoBehaviour
                 m_canvasGroupEnd.interactable = false;
                 m_canvasGroupEnd.blocksRaycasts = false;
                 m_canvasGroupEnd.DOFade(0f, 1f);
+                RetryFromCurrentLevel();
                 break;
         }
 
@@ -92,8 +92,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
         MoveBatToSpawn(0);
     }
 
@@ -130,6 +128,7 @@ public class GameManager : MonoBehaviour
         m_currentState = UI_State.End;
         m_batControls.Gameplay.Disable();
         m_batControls.Menu.Enable();
+        m_canvasGroupInGame.DOFade(0f, 1f);
         m_canvasGroupEnd.interactable = true;
         m_canvasGroupEnd.blocksRaycasts = true;
         m_canvasGroupEnd.DOFade(1f, 1f);
@@ -140,8 +139,14 @@ public class GameManager : MonoBehaviour
         m_currentState = UI_State.Dead;
         m_batControls.Gameplay.Disable();
         m_batControls.Menu.Enable();
+        m_canvasGroupInGame.DOFade(0f, 1f);
         m_canvasGroupLoose.interactable = true;
         m_canvasGroupLoose.blocksRaycasts = true;
         m_canvasGroupLoose.DOFade(1f, 1f);
+    }
+
+    private void RetryFromCurrentLevel()
+    {
+        
     }
 }
