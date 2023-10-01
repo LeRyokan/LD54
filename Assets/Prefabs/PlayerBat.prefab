@@ -323,10 +323,9 @@ MonoBehaviour:
   isInSafeSpace: 0
   m_wingFlapDir: {x: 0, y: 1, z: 0}
   m_wingFlapForce: 5
-  m_staminaPerFlap: 0
-  m_reflectForceOnWallCollideX: 2
   velocity: 0.05
   m_staminaPerFlap: 5
+  m_reflectForceOnWallCollideX: 2
 --- !u!50 &3407196790248781717
 Rigidbody2D:
   serializedVersion: 4

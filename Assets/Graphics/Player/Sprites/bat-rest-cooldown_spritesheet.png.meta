@@ -1,0 +1,1007 @@
+fileFormatVersion: 2
+guid: 09cf12d86f0097d4c9860db97c99f9ad
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ede70e23f9baf4ab33d635f58178b3
+      internalID: -1216179825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061bd05531c5a3345b77941a3bf17311
+      internalID: 1016801865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c35a1cec0c326a4ca7644543f2ba808
+      internalID: 1724450243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca429db71896a14eb0362c5b3e5f4ec
+      internalID: 1113952362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bdf2c29497fa8488a6d42d61c764ff
+      internalID: -1856175710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b4fc6b269eaf84f96360705d724b9c
+      internalID: -2026634762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea4b015c54752f40a88eb85a437ba95
+      internalID: -505903684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 3448
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c920c0552aab5b4c8f6061b38f1f302
+      internalID: 814548129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4339f0cdf359ada40b7e9af11f9977e2
+      internalID: -621358510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b997976868ba974b88784e7d2c94299
+      internalID: 1421557372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81e592b965536e40a5fdf7747698a15
+      internalID: 222146498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b67cf954b6241540ad663acbac0cdde
+      internalID: 2074636551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3ae69d6a0cd744c934edf48ab09530
+      internalID: -1273291383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a68eb633d6ed14eb17730009d9da7f
+      internalID: -617906045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a8a384f1f51f44995a80113eaa7f17
+      internalID: 1516798960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 2586
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512482592f12eb74abd36ec71d19cc83
+      internalID: -910094776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2f270e79dea4745805104806e6d70b
+      internalID: 861274302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c75edc28e1e1794ca322799db1e719c
+      internalID: 998501278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d84ffd8b7aae684287ae8c4617f771a
+      internalID: 458131871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010bff95589d4f042b935e4df8b35584
+      internalID: 1713366280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee89112908b23345ae1f03e249e15bd
+      internalID: 1703187566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba312827ea3c44c46837eac245100007
+      internalID: -1641544997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0c304ca1f203b4db2df5b3ec378527
+      internalID: -48145303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 1724
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3958bee812a416548a0797da89b8b8f5
+      internalID: -1850271642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92765c80486766f46b4c699aeb1b8c4e
+      internalID: -956495919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b65d51430e4c74e951c24282ad0f1b
+      internalID: -331198414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c829670a5d03c48827337ebc9e3640
+      internalID: 217597784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ea447ac9e4ce64990d38abdfc55c2b
+      internalID: 1286710621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e2174026cd530419c5f243ccc56694
+      internalID: -566123915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f962fea7e826c674ea23ef6ee15ecd3c
+      internalID: 1433226229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c20e031a517594a8de822c66d9978a
+      internalID: 975223178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 862
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70559e7f709bc434d9bb0b4e8954726f
+      internalID: -1461505051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b830e6d3a4bb04a9d8f1c613ef99c8
+      internalID: 1004127985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d20d5b7239b02499c4f6fe95d5ddce
+      internalID: -735763420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fdd81ad00718746a1b267c63143d38
+      internalID: 332673945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c020abf33af8fa4cabb064e4c62b9c7
+      internalID: 2120695722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd78ade6a309beb4e8758044b7672c97
+      internalID: -11811868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe873ba5a58cf24aa7a0c298844adec
+      internalID: -2111053389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e86dd52afacfa64685f171a669f7403
+      internalID: 320056995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-rest-cooldown_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 0
+        width: 458
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1af196552709246845a095ade2019d
+      internalID: 93320026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8e617909c89b9da48aeadc6ed7bd75dd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bat-rest-cooldown_spritesheet_0: -1216179825
+      bat-rest-cooldown_spritesheet_1: 1016801865
+      bat-rest-cooldown_spritesheet_10: 222146498
+      bat-rest-cooldown_spritesheet_11: 2074636551
+      bat-rest-cooldown_spritesheet_12: -1273291383
+      bat-rest-cooldown_spritesheet_13: -617906045
+      bat-rest-cooldown_spritesheet_14: 1516798960
+      bat-rest-cooldown_spritesheet_15: -910094776
+      bat-rest-cooldown_spritesheet_16: 861274302
+      bat-rest-cooldown_spritesheet_17: 998501278
+      bat-rest-cooldown_spritesheet_18: 458131871
+      bat-rest-cooldown_spritesheet_19: 1713366280
+      bat-rest-cooldown_spritesheet_2: 1724450243
+      bat-rest-cooldown_spritesheet_20: 1703187566
+      bat-rest-cooldown_spritesheet_21: -1641544997
+      bat-rest-cooldown_spritesheet_22: -48145303
+      bat-rest-cooldown_spritesheet_23: -1850271642
+      bat-rest-cooldown_spritesheet_24: -956495919
+      bat-rest-cooldown_spritesheet_25: -331198414
+      bat-rest-cooldown_spritesheet_26: 217597784
+      bat-rest-cooldown_spritesheet_27: 1286710621
+      bat-rest-cooldown_spritesheet_28: -566123915
+      bat-rest-cooldown_spritesheet_29: 1433226229
+      bat-rest-cooldown_spritesheet_3: 1113952362
+      bat-rest-cooldown_spritesheet_30: 975223178
+      bat-rest-cooldown_spritesheet_31: -1461505051
+      bat-rest-cooldown_spritesheet_32: 1004127985
+      bat-rest-cooldown_spritesheet_33: -735763420
+      bat-rest-cooldown_spritesheet_34: 332673945
+      bat-rest-cooldown_spritesheet_35: 2120695722
+      bat-rest-cooldown_spritesheet_36: -11811868
+      bat-rest-cooldown_spritesheet_37: -2111053389
+      bat-rest-cooldown_spritesheet_38: 320056995
+      bat-rest-cooldown_spritesheet_39: 93320026
+      bat-rest-cooldown_spritesheet_4: -1856175710
+      bat-rest-cooldown_spritesheet_5: -2026634762
+      bat-rest-cooldown_spritesheet_6: -505903684
+      bat-rest-cooldown_spritesheet_7: 814548129
+      bat-rest-cooldown_spritesheet_8: -621358510
+      bat-rest-cooldown_spritesheet_9: 1421557372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

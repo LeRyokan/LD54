@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -143,7 +144,6 @@ public class BatController : MonoBehaviour
             UpdateStaminaBar();
         }
     }
-    
 
     public IEnumerator CooldownSonarAnim()
     {
@@ -177,8 +177,11 @@ public class BatController : MonoBehaviour
         }
     }
 
-    public IEnumerator freezeBatAndPushBatOffTheWall(Collision2D col) {
+    public IEnumerator freezeBatAndPushBatOffTheWall(Collision2D col)
+    {
 
+        m_spriteRenderer.DOFade(0f, 0.1f).SetLoops(5, LoopType.Yoyo).OnComplete(() => m_spriteRenderer.DOFade(1f,0.2f));
+        
         m_batControls.Disable(); // disable controls
         var reflectX = Vector3.zero;
         // as bat hitbox is circle and wall is square weird stuff happens (value can be < 0 / > 0 instead of 1 / -1)
