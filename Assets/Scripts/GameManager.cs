@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     }
     
     private FMOD.Studio.EventInstance instance;
+    private FMOD.Studio.EventInstance FinishSoundInstance;
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
@@ -101,6 +102,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevels()
     {
+        FinishSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Finish");
+        FinishSoundInstance.start();
         m_currentLevel++;
         PlayerCamera.Instance.backgroundMusicInstance.setParameterByName("Music Track", m_currentLevel);
         if (m_currentLevel < m_levelStartZoneList.Count)
