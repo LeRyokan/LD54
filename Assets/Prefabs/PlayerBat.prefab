@@ -318,13 +318,22 @@ MonoBehaviour:
   m_rigidbody: {fileID: 3407196790248781717}
   m_animator: {fileID: 880107407116150230}
   m_spriteRenderer: {fileID: 5982088885372890617}
+<<<<<<< HEAD
+=======
+  m_slider: {fileID: 0}
+>>>>>>> a12dbc0edd2c2db58a183902276f273fd5f3a906
   m_sonarWave: {fileID: 0}
   isInSafeSpace: 0
   m_wingFlapDir: {x: 0, y: 1, z: 0}
   m_wingFlapForce: 5
+<<<<<<< HEAD
   velocity: 0.01
   m_staminaPerFlap: 0
   m_reflectForceOnWallCollideX: 2
+=======
+  velocity: 0.05
+  m_staminaPerFlap: 5
+>>>>>>> a12dbc0edd2c2db58a183902276f273fd5f3a906
 --- !u!50 &3407196790248781717
 Rigidbody2D:
   serializedVersion: 4
