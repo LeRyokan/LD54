@@ -48,14 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rigidbody2D: {fileID: 654628265548231938}
-  m_sonarMaxDistance: 0
-  m_currentSonarDistance: 0
-  m_initialDirection: {x: 0, y: 0, z: 0}
   m_isInCooldown: 0
   m_shootCooldown: 2
   m_sonarForce: 5
+  m_sonarFinalScale: 0
   m_graphics: {fileID: 7387913635949041678}
   m_maskArea: {fileID: 1878050061911864535}
+  m_revealTime: 2
   panning: 0
   m_bat: {fileID: 0}
 --- !u!50 &654628265548231938

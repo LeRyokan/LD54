@@ -18,6 +18,8 @@ public class SonarWave : MonoBehaviour
     [SerializeField] private float m_sonarFinalScale;
     [SerializeField] private Transform m_graphics;
     [SerializeField] private GameObject m_maskArea;
+
+    [SerializeField] private float m_revealTime;
     
     [Header("Sound design")]
     [SerializeField][Range(-64f, 64f)] private float panning;
@@ -46,11 +48,16 @@ public class SonarWave : MonoBehaviour
 
     public void RevealWallOnHit(Vector2 pos)
     {
-        var currentMask = Instantiate(m_maskArea,pos,Quaternion.identity);
+        var currentMask = Instantiate(m_maskArea, pos, Quaternion.identity);
         
         currentMask.transform.localScale = new Vector3(1,1,1);
         currentMask.SetActive(true);
-        currentMask.transform.DOScale(m_sonarFinalScale, 2f).OnComplete(() => DestroyMask(currentMask));
+        // currentMask.transform.DOScale(m_sonarFinalScale, 2f).OnComplete(() => DestroyMask(currentMask));
+        currentMask.transform.DOScale(m_sonarFinalScale, m_revealTime/2).OnComplete(() => 
+            currentMask.transform.DOScale(0, m_revealTime).OnComplete(() => 
+                DestroyMask(currentMask)
+            )
+        );
     }
 
     public void DestroyMask(GameObject obj)
