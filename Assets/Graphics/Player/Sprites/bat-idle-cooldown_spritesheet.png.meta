@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: 713f7f20f86322f4baf4c5013638afe0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c773dd56a002d374db4e619690684f45
+      internalID: -18988002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2400
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872a68282aeae6b4b8b51d02ccbc2e54
+      internalID: 321527017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2400
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82a6c00438f02d47bc88d582c855a0d
+      internalID: -1532911282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2400
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007f8f124d13162408df8779944d83a1
+      internalID: -2057646019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 2400
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8e87259b7b71843be28f6a34f46026
+      internalID: -256223611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 2400
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0646816d991784ca87c5f5879cb89b
+      internalID: -238973851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917ea796cf44034479b5cd864f85798f
+      internalID: -238048834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1800
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9820300cc9dd5d0498190acde785d003
+      internalID: 1898965586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1800
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4eeaa3223918b40aeb6c759e8f0211
+      internalID: -857750886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1800
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87dbc575d94dde42ae78ac6483a55df
+      internalID: -1823339985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 1800
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1571cf9984d93049942d2f90238d4ec
+      internalID: 1004547890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 1800
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce7664446b3cf1459b9b43017298c7b
+      internalID: 1642628391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0633afdb66aa3394786e579ebc26b496
+      internalID: 1913553406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1200
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0580d74e47d704a8e68865419c78e9
+      internalID: 689345617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1200
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65dda2045e54ce94b8ab3417e34d025e
+      internalID: -1700556326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1200
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65cffffd0810094e8b39c291ed4852e
+      internalID: -1055063405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 1200
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee4a5b84b63587468fed849e0246410
+      internalID: 1673866835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 1200
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b24ad708e597374f917686137a4b15d
+      internalID: 1076975777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90775ca66ba4a0f49ae8e7c4012c21cb
+      internalID: 1110231526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 600
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41ff705f4abd3c49b07dadacb994e6f
+      internalID: 1332801098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 600
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b286aa67b2c3c4da1186095aa9d13b
+      internalID: -1661439016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 600
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfc7fbb8c281844a8ad3969fdafec22
+      internalID: 1398779096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 600
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5cbf5ef5eae1448a4b2c50df47ff8d
+      internalID: 128527549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 600
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c598f7dd940e98f45a7726822db06ea3
+      internalID: -1061274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6a848d759d3494ca08e233c37d9283
+      internalID: -1753383841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecbe3eec44fcbe4e928dd0acc99042c
+      internalID: 78117366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07db02f4e1669b144af382056115f363
+      internalID: 739953628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f58f0aed66a8043be0673d5014cf52
+      internalID: -962392992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 0
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9251b30b6178ac6418ff2d00af8ec2c5
+      internalID: 1129897620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-idle-cooldown_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 476
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b139ddadf53574b855dbb51c31ed33
+      internalID: -1962375228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e63c29133def76d418e89fab2fe310f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bat-idle-cooldown_spritesheet_0: -18988002
+      bat-idle-cooldown_spritesheet_1: 321527017
+      bat-idle-cooldown_spritesheet_10: 1004547890
+      bat-idle-cooldown_spritesheet_11: 1642628391
+      bat-idle-cooldown_spritesheet_12: 1913553406
+      bat-idle-cooldown_spritesheet_13: 689345617
+      bat-idle-cooldown_spritesheet_14: -1700556326
+      bat-idle-cooldown_spritesheet_15: -1055063405
+      bat-idle-cooldown_spritesheet_16: 1673866835
+      bat-idle-cooldown_spritesheet_17: 1076975777
+      bat-idle-cooldown_spritesheet_18: 1110231526
+      bat-idle-cooldown_spritesheet_19: 1332801098
+      bat-idle-cooldown_spritesheet_2: -1532911282
+      bat-idle-cooldown_spritesheet_20: -1661439016
+      bat-idle-cooldown_spritesheet_21: 1398779096
+      bat-idle-cooldown_spritesheet_22: 128527549
+      bat-idle-cooldown_spritesheet_23: -1061274
+      bat-idle-cooldown_spritesheet_24: -1753383841
+      bat-idle-cooldown_spritesheet_25: 78117366
+      bat-idle-cooldown_spritesheet_26: 739953628
+      bat-idle-cooldown_spritesheet_27: -962392992
+      bat-idle-cooldown_spritesheet_28: 1129897620
+      bat-idle-cooldown_spritesheet_29: -1962375228
+      bat-idle-cooldown_spritesheet_3: -2057646019
+      bat-idle-cooldown_spritesheet_4: -256223611
+      bat-idle-cooldown_spritesheet_5: -238973851
+      bat-idle-cooldown_spritesheet_6: -238048834
+      bat-idle-cooldown_spritesheet_7: 1898965586
+      bat-idle-cooldown_spritesheet_8: -857750886
+      bat-idle-cooldown_spritesheet_9: -1823339985
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

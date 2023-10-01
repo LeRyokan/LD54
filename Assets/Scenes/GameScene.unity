@@ -1878,6 +1878,7 @@ MonoBehaviour:
   - {fileID: 6930092140010263595, guid: 7dd10d8fe87d1754ba93b4574460a820, type: 3}
   - {fileID: 6930092140010263595, guid: d34a668d19554ea4aad5b493071e52c1, type: 3}
   - {fileID: 6930092140010263595, guid: 486e922a63a76654ab6ab98871af9c76, type: 3}
+  m_instanciatedLevels: []
   m_canvasGroupIntro: {fileID: 725958078}
   m_canvasGroupEnd: {fileID: 773263997}
   m_canvasGroupLoose: {fileID: 1924798669}
