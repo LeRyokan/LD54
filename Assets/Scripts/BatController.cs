@@ -27,7 +27,9 @@ public class BatController : MonoBehaviour
     [SerializeField] private Vector3 m_wingFlapDir;
     [SerializeField] private float m_wingFlapForce;
     [SerializeField] private float velocity;
-    [SerializeField] private float m_staminaPerFlap; 
+   [SerializeField] private int m_staminaPerFlap;
+
+   [SerializeField] private int m_reflectForceOnWallCollideX;
 
     private Vector2 m_mousePosition;
     private FMOD.Studio.EventInstance flapSoundInstance;
@@ -39,7 +41,7 @@ public class BatController : MonoBehaviour
     {
         m_currentStamina = m_staminaMax;
     }
-    
+
     private void OnEnable()
     {
         m_batControls = new BatControls();
@@ -51,7 +53,7 @@ public class BatController : MonoBehaviour
         m_batControls.Gameplay.WingFlap.performed += WingFlapOnperformed;
         m_batControls.Gameplay.Sonar.performed += SonarOnperformed;
         m_batControls.Gameplay.LeaveSafeSpace.performed += LeaveSafeSpaceOnperformed;
-    }
+        }
 
     private void OnDisable()
     {
@@ -67,7 +69,7 @@ public class BatController : MonoBehaviour
             DisableSafeSpace();
         }
     }
-
+    
     private void SonarOnperformed(InputAction.CallbackContext obj)
     {
         if (isInSafeSpace) 
@@ -160,12 +162,36 @@ public class BatController : MonoBehaviour
     {
         if (col.transform.CompareTag("Wall"))
         {
+            // colliding with a wall deactivate input controller for a short time
+            // and pushes you away from the wall
+            StartCoroutine(freezeBatAndPushBatOffTheWall(col));
             hitWallSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Hit");
             hitWallSoundInstance.start();
         } else if (col.transform.CompareTag("DeathWall")) {
             Death();
             Debug.Log("Player is dead");
-        } 
+        }
+    }
+
+    public IEnumerator freezeBatAndPushBatOffTheWall(Collision2D col) {
+
+        m_batControls.Disable(); // disable controls
+        var reflectX = Vector3.zero;
+        // as bat hitbox is circle and wall is square weird stuff happens (value can be < 0 / > 0 instead of 1 / -1)
+        if (col.contacts[0].normal.x > 0)
+        {
+            reflectX = new Vector3(m_reflectForceOnWallCollideX, 0, 0);
+        } else if (col.contacts[0].normal.x < 0)
+        {
+            reflectX = new Vector3(-m_reflectForceOnWallCollideX, 0, 0);
+        }
+        // add inverse force of normal vector from wall collision
+        m_rigidbody.AddForce(reflectX, ForceMode2D.Impulse); // push bat off the wall
+        yield return new WaitForSeconds(0.5f);
+        // after 0.5 second we reset the velocity (remove previous force)
+        m_rigidbody.velocity = Vector2.zero;
+        // and then let the user use inputs back again !
+        m_batControls.Enable();
     }
 
     public void ActivateSafeSpace()
@@ -199,13 +225,12 @@ public class BatController : MonoBehaviour
     }
 
     public void FinishGame()
-    {
-        m_finishGame = true;
-    }
+        {
+            m_finishGame = true;
+        }
 
     public void UpdateStaminaBar()
     {
         m_slider.value = m_currentStamina / 100f;
     }
-    
 }

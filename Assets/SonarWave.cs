@@ -15,6 +15,8 @@ public class SonarWave : MonoBehaviour
     [SerializeField] private Rigidbody2D m_rigidbody2D;
     [SerializeField] private Transform m_graphics;
     [SerializeField] private GameObject m_maskArea;
+
+    [SerializeField] private float m_revealTime;
     
     [Header("Tweaking value")]
     [SerializeField] private float m_shootCooldown = 2;
@@ -44,11 +46,16 @@ public class SonarWave : MonoBehaviour
 
     public void RevealWallOnHit(Vector2 pos)
     {
-        var currentMask = Instantiate(m_maskArea,pos,Quaternion.identity);
+        var currentMask = Instantiate(m_maskArea, pos, Quaternion.identity);
         
         currentMask.transform.localScale = new Vector3(1,1,1);
         currentMask.SetActive(true);
-        currentMask.transform.DOScale(m_sonarFinalScale, 2f).OnComplete(() => DestroyMask(currentMask));
+        // currentMask.transform.DOScale(m_sonarFinalScale, 2f).OnComplete(() => DestroyMask(currentMask));
+        currentMask.transform.DOScale(m_sonarFinalScale, m_revealTime/2).OnComplete(() => 
+            currentMask.transform.DOScale(0, m_revealTime).OnComplete(() => 
+                DestroyMask(currentMask)
+            )
+        );
     }
 
     public void DestroyMask(GameObject obj)
