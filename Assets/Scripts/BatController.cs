@@ -38,6 +38,7 @@ public class BatController : MonoBehaviour
     private FMOD.Studio.EventInstance activeSafeSpaceInstance;
     private FMOD.Studio.EventInstance finishScreamInstance;
     private FMOD.Studio.EventInstance sonarScreamInstance;
+    private FMOD.Studio.EventInstance deathSoundInstance;
     
     private void Awake()
     {
@@ -230,6 +231,8 @@ public class BatController : MonoBehaviour
             return;
         
         GameManager.Instance.ShowDeadScreen();
+        deathSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Death");
+        deathSoundInstance.start();
         m_isDead = true;
     }
 
