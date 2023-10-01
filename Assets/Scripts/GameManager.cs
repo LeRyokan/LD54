@@ -43,9 +43,6 @@ public class GameManager : MonoBehaviour
         { 
             Instance = this; 
         }
-
-        //m_instanciatedLevels = new List<GameObject>();
-
     }
 
     private void OnEnable()
@@ -81,11 +78,12 @@ public class GameManager : MonoBehaviour
                 m_canvasGroupLoose.blocksRaycasts = false;
                 m_canvasGroupLoose.DOFade(0f, 1f);
                 LoadLevelAndSetPlayerSpawn();
+                m_canvasGroupInGame.DOFade(1f, 1f);
                 break;
             case UI_State.End:
-                m_canvasGroupEnd.interactable = false;
-                m_canvasGroupEnd.blocksRaycasts = false;
-                m_canvasGroupEnd.DOFade(0f, 1f);
+                // m_canvasGroupEnd.interactable = false;
+                // m_canvasGroupEnd.blocksRaycasts = false;
+                // m_canvasGroupEnd.DOFade(0f, 1f);
                 Application.Quit();
                 break;
         }
