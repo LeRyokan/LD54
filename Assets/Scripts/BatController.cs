@@ -7,22 +7,25 @@ using UnityEngine.Serialization;
 
 public class BatController : MonoBehaviour
 {
-    private BatControls m_batControls;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Rigidbody2D m_rigidbody;
-    [SerializeField] private Vector3 m_wingFlapDir;
-    [SerializeField] private float m_wingFlapForce;
-    [SerializeField] private Vector2 m_wingDir;
-    [SerializeField] private bool m_isDead;
-    [SerializeField] private bool m_finishGame;
-    [SerializeField] private SonarWave m_sonarWave;
     [SerializeField] private Animator m_animator;
     [SerializeField] private SpriteRenderer m_spriteRenderer;
     
+    private BatControls m_batControls;
+    private SonarWave m_sonarWave;
+    private Vector2 m_wingDir;
+    private bool m_isDead;
+    private bool m_finishGame;
+    private int m_staminaMax = 100;
+    private int m_currentStamina;
+    public bool isInSafeSpace;
+    
+    [Header("Tweaking value")]
+    [SerializeField] private Vector3 m_wingFlapDir;
+    [SerializeField] private float m_wingFlapForce;
     [SerializeField] private float velocity;
-   
-    [SerializeField] public bool isInSafeSpace;
-    [SerializeField] public SafeSpace currentSafeSpace;
+    [SerializeField] private int m_staminaPerFlap; 
 
     private Vector2 m_mousePosition;
     private FMOD.Studio.EventInstance flapSoundInstance;
@@ -32,9 +35,10 @@ public class BatController : MonoBehaviour
     
     private void Awake()
     {
-        
-        
+        m_currentStamina = m_staminaMax;
+
     }
+    
     private void OnEnable()
     {
         m_batControls = new BatControls();
@@ -46,9 +50,13 @@ public class BatController : MonoBehaviour
         m_batControls.Gameplay.WingFlap.performed += WingFlapOnperformed;
         m_batControls.Gameplay.Sonar.performed += SonarOnperformed;
         m_batControls.Gameplay.LeaveSafeSpace.performed += LeaveSafeSpaceOnperformed;
-        
-        //always spawn in a safe space
-        //ActivateSafeSpace();
+    }
+
+    private void OnDisable()
+    {
+        m_batControls.Gameplay.WingFlap.performed -= WingFlapOnperformed;
+        m_batControls.Gameplay.Sonar.performed -= SonarOnperformed;
+        m_batControls.Gameplay.LeaveSafeSpace.performed -= LeaveSafeSpaceOnperformed;
     }
 
     private void LeaveSafeSpaceOnperformed(InputAction.CallbackContext obj)
@@ -59,13 +67,6 @@ public class BatController : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        m_batControls.Gameplay.WingFlap.performed -= WingFlapOnperformed;
-        m_batControls.Gameplay.Sonar.performed -= SonarOnperformed;
-        m_batControls.Gameplay.LeaveSafeSpace.performed -= LeaveSafeSpaceOnperformed;
-    }
-    
     private void SonarOnperformed(InputAction.CallbackContext obj)
     {
         if (isInSafeSpace) 
@@ -90,7 +91,7 @@ public class BatController : MonoBehaviour
     {
         if (isInSafeSpace) 
             return;
-        
+        m_currentStamina -= m_staminaPerFlap;
         var moveDir = new Vector3(0, m_wingFlapDir.y, 0); // flap only move upward using force
         m_rigidbody.AddForce(moveDir * m_wingFlapForce,ForceMode2D.Impulse);
         m_animator.SetTrigger("Flap");
@@ -183,4 +184,10 @@ public class BatController : MonoBehaviour
     {
         m_finishGame = true;
     }
+
+    public IEnumerator SlowlyReloadStamina()
+    {
+        yield return null;
+    }
+    
 }
