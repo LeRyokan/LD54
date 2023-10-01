@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class BatController : MonoBehaviour
 {
@@ -11,9 +12,10 @@ public class BatController : MonoBehaviour
     [SerializeField] private Rigidbody2D m_rigidbody;
     [SerializeField] private Animator m_animator;
     [SerializeField] private SpriteRenderer m_spriteRenderer;
+    [SerializeField] private Slider m_slider;
+    [SerializeField] private SonarWave m_sonarWave;
     
     private BatControls m_batControls;
-    private SonarWave m_sonarWave;
     private Vector2 m_wingDir;
     private bool m_isDead;
     private bool m_finishGame;
@@ -36,7 +38,6 @@ public class BatController : MonoBehaviour
     private void Awake()
     {
         m_currentStamina = m_staminaMax;
-
     }
     
     private void OnEnable()
@@ -89,9 +90,13 @@ public class BatController : MonoBehaviour
 
     private void WingFlapOnperformed(InputAction.CallbackContext obj)
     {
-        if (isInSafeSpace) 
+        if (isInSafeSpace || m_currentStamina <= 0) 
             return;
+        
         m_currentStamina -= m_staminaPerFlap;
+        UpdateStaminaBar();
+        
+        
         var moveDir = new Vector3(0, m_wingFlapDir.y, 0); // flap only move upward using force
         m_rigidbody.AddForce(moveDir * m_wingFlapForce,ForceMode2D.Impulse);
         m_animator.SetTrigger("Flap");
@@ -108,7 +113,9 @@ public class BatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_mousePosition = m_batControls.Gameplay.MousePosition.ReadValue<Vector2>();
         m_wingDir = m_batControls.Gameplay.Direction.ReadValue<Vector2>();
+        
         if(m_wingDir.x < 0)
         {
             m_spriteRenderer.flipX = true;
@@ -118,11 +125,22 @@ public class BatController : MonoBehaviour
             m_spriteRenderer.flipX = false;
         }
         
-        m_mousePosition = m_batControls.Gameplay.MousePosition.ReadValue<Vector2>();
         var originPos = m_rigidbody.transform.position;
         var inputPos = new Vector3(m_wingDir.x * velocity, 0, 0);
         m_rigidbody.transform.position = originPos + inputPos;
+
+        if (isInSafeSpace)
+        {
+            m_currentStamina++;
+            if (m_currentStamina > m_staminaMax)
+            {
+                m_currentStamina = m_staminaMax;
+            }
+
+            UpdateStaminaBar();
+        }
     }
+    
 
     public IEnumerator CooldownSonarAnim()
     {
@@ -188,6 +206,11 @@ public class BatController : MonoBehaviour
     public IEnumerator SlowlyReloadStamina()
     {
         yield return null;
+    }
+
+    public void UpdateStaminaBar()
+    {
+        m_slider.value = m_currentStamina / 100f;
     }
     
 }
