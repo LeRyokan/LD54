@@ -1728,7 +1728,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649878141}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1059681741}
@@ -5911,9 +5911,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerBat: {fileID: 7787863903605532514}
   m_levelStartZoneList:
+  - {fileID: 6930092140010263595, guid: 50171c8c8a19ea347af90e2be1c595dd, type: 3}
+  - {fileID: 6930092140010263595, guid: db30a706b985ef54e96c877c3d02b572, type: 3}
+  - {fileID: 6930092140010263595, guid: cdbaf58db2c9bd94f824adf3971ccc47, type: 3}
+  - {fileID: 6930092140010263595, guid: 840c56221151d5740a5821166df20ee7, type: 3}
   - {fileID: 6930092140010263595, guid: f3ed1f385d2a4cc48b6b46ee32af0953, type: 3}
-  - {fileID: 6930092140010263595, guid: d34a668d19554ea4aad5b493071e52c1, type: 3}
-  - {fileID: 6930092140010263595, guid: 486e922a63a76654ab6ab98871af9c76, type: 3}
   m_instanciatedLevels: []
   m_canvasGroupIntro: {fileID: 725958078}
   m_canvasGroupEnd: {fileID: 773263997}
