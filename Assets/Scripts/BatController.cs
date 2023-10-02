@@ -15,6 +15,7 @@ public class BatController : MonoBehaviour
     [SerializeField] private SpriteRenderer m_spriteRenderer;
     [SerializeField] private Slider m_slider;
     [SerializeField] private SonarWave m_sonarWave;
+    [SerializeField] private GameObject m_maskArea;
     
     private BatControls m_batControls;
     private Vector2 m_wingDir;
@@ -206,6 +207,7 @@ public class BatController : MonoBehaviour
     public void ActivateSafeSpace(Vector3 safeSpacePosition)
     {
         transform.position = safeSpacePosition + m_safeSpaceOffset;
+        m_maskArea.SetActive(true);
         m_animator.SetBool("IsSafe",true);
         isInSafeSpace = true;
         m_rigidbody.velocity = Vector2.zero;
@@ -220,6 +222,7 @@ public class BatController : MonoBehaviour
     public void DisableSafeSpace()
     {
         m_animator.SetBool("IsSafe",false);
+        m_maskArea.SetActive(false);
         isInSafeSpace = false;
         m_rigidbody.gravityScale = 1f;
         m_batControls.Gameplay.Sonar.Enable();
