@@ -47,16 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02a38209bf8fa840b329121edfdf859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_rigidbody2D: {fileID: 654628265548231938}
   m_isInCooldown: 0
-  m_shootCooldown: 2
-  m_sonarForce: 5
-  m_sonarFinalScale: 0
+  m_bat: {fileID: 0}
+  m_rigidbody2D: {fileID: 654628265548231938}
   m_graphics: {fileID: 7387913635949041678}
   m_maskArea: {fileID: 1878050061911864535}
   m_revealTime: 2
+  m_shootCooldown: 2
+  m_sonarForce: 5
+  m_sonarFinalScale: 0
   panning: 0
-  m_bat: {fileID: 0}
 --- !u!50 &654628265548231938
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 1218626262, guid: 80536bf5fc1ee8840b8eaaa50b3d2e00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5eb79217a166d0b45a54c9557f3b5dc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
