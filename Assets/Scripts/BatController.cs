@@ -126,7 +126,7 @@ public class BatController : MonoBehaviour
         {
             m_spriteRenderer.flipX = true;
         }
-        else
+        else if (m_wingDir.x > 0)
         {
             m_spriteRenderer.flipX = false;
         }
