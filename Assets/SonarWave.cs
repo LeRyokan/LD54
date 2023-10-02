@@ -31,7 +31,7 @@ public class SonarWave : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.transform.CompareTag("Wall"))
+        if (col.transform.CompareTag("Wall") || col.transform.CompareTag("DeathWall"))
         {
             RevealWallOnHit(col.contacts[0].point);
             ReflectProjectile(m_rigidbody2D, col.contacts[0].normal);
