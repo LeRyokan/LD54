@@ -25,7 +25,8 @@ public class SafeSpace : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<BatController>().ActivateSafeSpace();
+            Vector3 newPos = new Vector3(0, 0 ,0);
+            other.GetComponent<BatController>().ActivateSafeSpace(transform.position);
         }
     }
     

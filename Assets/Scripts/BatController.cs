@@ -28,7 +28,8 @@ public class BatController : MonoBehaviour
     [SerializeField] private Vector3 m_wingFlapDir;
     [SerializeField] private float m_wingFlapForce;
     [SerializeField] private float velocity;
-   [SerializeField] private int m_staminaPerFlap;
+    [SerializeField] private int m_staminaPerFlap;
+    [SerializeField] private Vector3 m_safeSpaceOffset;
 
    [SerializeField] private int m_reflectForceOnWallCollideX;
 
@@ -202,8 +203,9 @@ public class BatController : MonoBehaviour
         m_batControls.Enable();
     }
 
-    public void ActivateSafeSpace()
+    public void ActivateSafeSpace(Vector3 safeSpacePosition)
     {
+        transform.position = safeSpacePosition + m_safeSpaceOffset;
         m_animator.SetBool("IsSafe",true);
         isInSafeSpace = true;
         m_rigidbody.velocity = Vector2.zero;

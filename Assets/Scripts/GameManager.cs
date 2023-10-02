@@ -165,9 +165,9 @@ public class GameManager : MonoBehaviour
     {
         var currentLevel = Instantiate(m_levelStartZoneList[m_currentLevel].gameObject,new Vector3(0,0,0),quaternion.identity);
         m_instanciatedLevels.Add(currentLevel);
-        var nextPos = currentLevel.GetComponent<LevelInfo>().playerSpawn;
-        m_playerBat.transform.position = nextPos.transform.position;
-        m_playerBat.ActivateSafeSpace();
+        var nextPos = currentLevel.GetComponent<LevelInfo>().playerSpawn.transform.position;
+        m_playerBat.transform.position = nextPos;
+        m_playerBat.ActivateSafeSpace(nextPos);
         
         //Destroy previous level
         if (m_currentLevel >= 1)
