@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8165038158600385157}
   - component: {fileID: 5982088885372890617}
   - component: {fileID: 880107407116150230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4813838606900722002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116,7 +116,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4748728579955055608}
   - component: {fileID: 1507626134057434882}
-  m_Layer: 0
+  - component: {fileID: 2836059074433314543}
+  - component: {fileID: 4232013013267333264}
+  m_Layer: 8
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5355363209490814128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15999985, y: 0.119999886, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -178,6 +180,49 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 6410398317158831613}
+--- !u!114 &2836059074433314543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355363209490814128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
+--- !u!114 &4232013013267333264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355363209490814128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7161bf8c3725b496eb93a436487a1956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6448205429987084512
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +234,7 @@ GameObject:
   - component: {fileID: 6410398317158831613}
   - component: {fileID: 9171058312224720113}
   - component: {fileID: 4065323099444816732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +323,7 @@ GameObject:
   - component: {fileID: 293158584024742230}
   - component: {fileID: 3407196790248781717}
   - component: {fileID: 335435473547150546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerBat
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -322,12 +367,14 @@ MonoBehaviour:
   m_slider: {fileID: 0}
   m_sonarWave: {fileID: 0}
   m_maskArea: {fileID: 7009994907194382427}
+  m_staminaMax: 100
+  m_currentStamina: 0
   isInSafeSpace: 0
   m_wingFlapDir: {x: 0, y: 1, z: 0}
   m_wingFlapForce: 5
-  velocity: 0.05
-  m_staminaPerFlap: 5
-  m_safeSpaceOffset: {x: 0, y: 0, z: 0}
+  velocity: 3
+  m_staminaPerFlap: 3
+  m_safeSpaceOffset: {x: 0, y: -1.5, z: 0}
   m_reflectForceOnWallCollideX: 2
 --- !u!50 &3407196790248781717
 Rigidbody2D:
@@ -344,7 +391,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -388,9 +435,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.1}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.2
 --- !u!1001 &6573904664579889958
 PrefabInstance:
   m_ObjectHideFlags: 0

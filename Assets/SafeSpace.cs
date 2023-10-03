@@ -17,6 +17,7 @@ public class SafeSpace : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("DESTROY");
             DestroySafeSpace();
         }
     }
@@ -25,6 +26,7 @@ public class SafeSpace : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("ENTER");
             Vector3 newPos = new Vector3(0, 0 ,0);
             other.GetComponent<BatController>().ActivateSafeSpace(transform.position);
         }

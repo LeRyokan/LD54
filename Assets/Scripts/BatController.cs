@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using DG.Tweening.Plugins;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -16,13 +17,14 @@ public class BatController : MonoBehaviour
     [SerializeField] private Slider m_slider;
     [SerializeField] private SonarWave m_sonarWave;
     [SerializeField] private GameObject m_maskArea;
+    [SerializeField] private CircleCollider2D m_hitbox;
     
     private BatControls m_batControls;
     private Vector2 m_wingDir;
-    private bool m_isDead;
+    public bool m_isDead;
     private bool m_finishGame;
-    private float m_staminaMax = 100f;
-    private float m_currentStamina;
+    public float m_staminaMax = 100f;
+    public float m_currentStamina;
     public bool isInSafeSpace;
     
     [Header("Tweaking value")]
@@ -228,17 +230,25 @@ public class BatController : MonoBehaviour
         m_batControls.Gameplay.Sonar.Enable();
         m_batControls.Gameplay.WingFlap.Enable();
         m_batControls.Gameplay.Direction.Enable();
+        m_hitbox.enabled = false;
+        m_hitbox.enabled = true;
     }
     
     public void Death()
     {
-        if (m_finishGame)
+        if (m_finishGame || m_isDead)
             return;
-        
+        m_batControls.Gameplay.Disable();
         GameManager.Instance.ShowDeadScreen();
         deathSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Char/Bat/Death");
         deathSoundInstance.start();
         m_isDead = true;
+    }
+
+    public void Revive()
+    {
+        m_batControls.Gameplay.Enable();
+        m_isDead = false;
     }
 
     public void FinishGame()

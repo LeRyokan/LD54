@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CanvasGroup m_canvasGroupInGame;
     private UI_State m_currentState;
     public int m_currentLevel = 0;
+    public int m_tryCount = 0;
     
     public enum UI_State
     {
@@ -78,7 +79,9 @@ public class GameManager : MonoBehaviour
                 m_canvasGroupLoose.interactable = false;
                 m_canvasGroupLoose.blocksRaycasts = false;
                 m_canvasGroupLoose.DOFade(0f, 1f);
+                m_tryCount++;
                 LoadLevelAndSetPlayerSpawn();
+                m_playerBat.Revive();
                 m_canvasGroupInGame.DOFade(1f, 1f);
                 break;
             case UI_State.End:
@@ -102,6 +105,7 @@ public class GameManager : MonoBehaviour
     {
         FinishSoundInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Finish");
         FinishSoundInstance.start();
+        m_tryCount++;
         m_currentLevel++;
         PlayerCamera.Instance.backgroundMusicInstance.setParameterByName("Music Track", m_currentLevel);
         if (m_currentLevel < m_levelStartZoneList.Count)
@@ -162,6 +166,23 @@ public class GameManager : MonoBehaviour
     }
 
     private void LoadLevelAndSetPlayerSpawn()
+    {
+        m_playerBat.m_currentStamina = m_playerBat.m_staminaMax;
+        var currentLevel = Instantiate(m_levelStartZoneList[m_currentLevel].gameObject,new Vector3(0,0,0),quaternion.identity);
+        m_instanciatedLevels.Add(currentLevel);
+        var nextPos = currentLevel.GetComponent<LevelInfo>().playerSpawn.transform.position;
+        m_playerBat.transform.position = nextPos;
+        m_playerBat.ActivateSafeSpace(nextPos);
+        
+        //Destroy previous level
+        if (m_tryCount >= 1)
+        {
+            var previouslevel = m_tryCount - 1;
+            m_instanciatedLevels[previouslevel].SetActive(false);
+        }
+    }
+    
+    private void DestroyLevel()
     {
         var currentLevel = Instantiate(m_levelStartZoneList[m_currentLevel].gameObject,new Vector3(0,0,0),quaternion.identity);
         m_instanciatedLevels.Add(currentLevel);

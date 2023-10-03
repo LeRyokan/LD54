@@ -27,6 +27,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8442381052085969700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/RevealInOut
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/RevealInOut
+  Guid:
+    Data1: 389434042
+    Data2: 1300543947
+    Data3: 1892608422
+    Data4: 378415304
+  Banks:
+  - {fileID: 9192838263954299782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-8236332558732736683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Safe Space/Grapin
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Safe Space/Grapin
+  Guid:
+    Data1: 1991043061
+    Data2: 1322875215
+    Data3: 65853629
+    Data4: 1107844429
+  Banks:
+  - {fileID: 9192838263954299782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7718655712070337141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +124,7 @@ MonoBehaviour:
   Path: Assets/FMOD_BUILD/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638317653009775057
+  lastModified: 638318060092390561
   FileSizes: []
   Exists: 1
 --- !u!114 &-6349845038562070186
@@ -88,8 +142,34 @@ MonoBehaviour:
   Path: Assets/FMOD_BUILD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638316879285550867
+  lastModified: 638318060091687361
   FileSizes: []
+  Exists: 1
+--- !u!114 &-6277343914468672319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/WINDdir
+  m_EditorClassIdentifier: 
+  Name: WINDdir
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2739025841
+    data2: 1589398972
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Right(Face)
+  - Left(Back)
   Exists: 1
 --- !u!114 &-6232249971991312775
 MonoBehaviour:
@@ -130,10 +210,10 @@ MonoBehaviour:
   Path: Assets/FMOD_BUILD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638317653008992883
+  lastModified: 638318060091687361
   FileSizes:
   - Name: 
-    Value: 1630
+    Value: 2014
   Exists: 1
 --- !u!114 &-3695591464468409966
 MonoBehaviour:
@@ -189,6 +269,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7700
+--- !u!114 &-3025339330801108473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sonar Reveals Wall/Pan (Wall Sonar Bounce)
+  m_EditorClassIdentifier: 
+  Name: Pan (Wall Sonar Bounce)
+  StudioPath: 
+  Min: -64
+  Max: 64
+  Default: -64
+  ID:
+    data1: 1634128695
+    data2: 569946127
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2981215418410377448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Ambience
+  Guid:
+    Data1: -1899184586
+    Data2: 1161382420
+    Data3: -1732140885
+    Data4: -323996152
+  Banks:
+  - {fileID: 5590051178784807889}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6277343914468672319}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 412320
 --- !u!114 &-2512674847665400586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,11 +374,10 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 4153049171171005540}
-  - {fileID: 1558469563404670875}
   - {fileID: 699730551736737098}
   MinDistance: 1
   MaxDistance: 20
-  Length: 10000
+  Length: 2000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +396,7 @@ MonoBehaviour:
   - {fileID: -6349845038562070186}
   - {fileID: -6665230861587776940}
   - {fileID: 9192838263954299782}
+  - {fileID: 5590051178784807889}
   EditorEvents:
   - {fileID: 5089960098394645233}
   - {fileID: 1302917367643236679}
@@ -276,12 +408,20 @@ MonoBehaviour:
   - {fileID: 4992796514600225459}
   - {fileID: -3695591464468409966}
   - {fileID: -3108113723888841695}
+  - {fileID: -2981215418410377448}
+  - {fileID: 6986297652051214345}
+  - {fileID: 6441927718067096165}
+  - {fileID: 3392764135974107700}
+  - {fileID: -8442381052085969700}
+  - {fileID: 6079992043509648774}
+  - {fileID: -8236332558732736683}
+  - {fileID: 5129280375509513323}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6349845038562070186}
   StringsBanks:
   - {fileID: -4774357331732526039}
-  cacheTime: 638317653009820499
+  cacheTime: 638318060092430453
   cacheVersion: 131607
 --- !u!114 &686716904738530828
 MonoBehaviour:
@@ -309,7 +449,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1343
+  Length: 600
 --- !u!114 &699730551736737098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,30 +501,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &1558469563404670875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Sonar/ExitLoopSmooth
-  m_EditorClassIdentifier: 
-  Name: ExitLoopSmooth
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 4265410384
-    data2: 4123756079
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &1795901504920522203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,9 +516,36 @@ MonoBehaviour:
   Path: Assets/FMOD_BUILD/Desktop/Char.bank
   Name: Char
   StudioPath: bank:/Char
-  lastModified: 638317653008992883
+  lastModified: 638318060091677387
   FileSizes: []
   Exists: 1
+--- !u!114 &3392764135974107700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Sonar Reveals Out
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Sonar Reveals Out
+  Guid:
+    Data1: -504521180
+    Data2: 1218135822
+    Data3: -295320692
+    Data4: -25976606
+  Banks:
+  - {fileID: 9192838263954299782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4153049171171005540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +624,133 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5129280375509513323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Safe Space/SonarDetect
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Safe Space/SonarDetect
+  Guid:
+    Data1: -1221409286
+    Data2: 1275605721
+    Data3: -1336510024
+    Data4: 1922412809
+  Banks:
+  - {fileID: 9192838263954299782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5590051178784807889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_BUILD/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638318060091627516
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6079992043509648774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Char/Bat/Sonar Reveals Wall
+  m_EditorClassIdentifier: 
+  Path: event:/Char/Bat/Sonar Reveals Wall
+  Guid:
+    Data1: 1635188963
+    Data2: 1119532566
+    Data3: -365800039
+    Data4: -362291429
+  Banks:
+  - {fileID: 9192838263954299782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3025339330801108473}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6441927718067096165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environnement/Sonar Reveals In
+  m_EditorClassIdentifier: 
+  Path: event:/Environnement/Sonar Reveals In
+  Guid:
+    Data1: -456047102
+    Data2: 1110469565
+    Data3: -1357704816
+    Data4: 943696265
+  Banks:
+  - {fileID: 9192838263954299782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6986297652051214345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Char/Bat/Death
+  m_EditorClassIdentifier: 
+  Path: event:/Char/Bat/Death
+  Guid:
+    Data1: 942400411
+    Data2: 1279030360
+    Data3: 1514860704
+    Data4: 1606218686
+  Banks:
+  - {fileID: 1795901504920522203}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4851
 --- !u!114 &9192838263954299782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +766,6 @@ MonoBehaviour:
   Path: Assets/FMOD_BUILD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638317653009820499
+  lastModified: 638318060092430453
   FileSizes: []
   Exists: 1
